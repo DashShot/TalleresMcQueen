@@ -5,6 +5,7 @@ INTENGRANTES DEL GRUPO:
  - Aitor García Camargo
  
 DESCRIPCIÓN:
+
 La Aplicación TalleresMcQueen es un prototipo de aplicación para gestión y seguimiento de reparaciones de automóviles
 
 FUNCIONALIDADES:
