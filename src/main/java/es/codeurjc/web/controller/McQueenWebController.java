@@ -23,5 +23,6 @@ public class McQueenWebController {
     public String showReparacion(Model model, @PathVariable long id){
 
     }
-
+    //Puruba
+    int prueba;
 }

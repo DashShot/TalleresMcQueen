@@ -1,7 +1,7 @@
 {{>header}}
 <form action="/login" method="post">
-    <label>User Name:</label><input type="text" name="username" /><br />
-    <label>Password:</label><input type="password" name="password" /><br />
+    <label>Nombre:</label><input type="text" name="username" /><br />
+    <label>Contraseña:</label><input type="password" name="password" /><br />
     <input type="submit" value="Sign In" /><br />				
     <input type="hidden" name="_csrf" value="{{token}}"/>
 </form>
