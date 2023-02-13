@@ -27,4 +27,3 @@ public String showReparaciones(Model model){
 public String showReparacion(Model model, @PathVariable long id){
     
 }
-*/
