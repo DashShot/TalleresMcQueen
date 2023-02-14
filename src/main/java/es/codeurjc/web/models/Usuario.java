@@ -6,13 +6,22 @@ import java.util.List;
 //import javax.annotation.Generated;
 //import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class Usuario {
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
     private String nombre;
     private String contrasena;
     private List<Valoraciones> listaValoraciones = new ArrayList<>();
+    private List<Reparacion> listaReparaciones = new ArrayList<>();
 
     public Usuario(){}
     public Usuario(String nombre, String contrasena){
@@ -25,6 +34,7 @@ public class Usuario {
     public void setNombre(String nombre){this.nombre = nombre;}
     public String getContrasena(){return contrasena;}
     public void setContrasena(String contrasena){this.contrasena = contrasena;}
+    
     //Aqui faltaría poner las listas de reparaciones
 
     //Listas de valoraciones
