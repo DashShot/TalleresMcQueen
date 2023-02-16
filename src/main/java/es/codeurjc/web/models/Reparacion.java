@@ -7,6 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+
+
 
 @Entity
 public class Reparacion {
@@ -16,7 +19,9 @@ public class Reparacion {
     private long id;
 
     private Usuario usuario;
-    private List<Mecanico> listamecanico = new ArrayList<>();
+
+    @ManyToMany
+    private List<Mecanico> listamecanico;
     private long tiempo;
 
     public Reparacion(){}

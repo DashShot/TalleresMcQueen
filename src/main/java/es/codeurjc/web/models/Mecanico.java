@@ -20,6 +20,7 @@ public class Mecanico {
 
     private String nombre;
     private String apellidos;
+    
     private List<Reparacion> listaReparaciones = new ArrayList<>();
 
     public Mecanico(){}

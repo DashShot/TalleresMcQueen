@@ -7,7 +7,7 @@ package es.codeurjc.web.models;
 //import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
-public class Contactos extends Usuario {
+public class Contactos {
     
     private String email;
     private long telefono;
