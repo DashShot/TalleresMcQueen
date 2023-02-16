@@ -8,6 +8,7 @@ package es.codeurjc.web.controller;
 
 //import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 //import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
@@ -39,7 +40,8 @@ public class McQueenWebController {
     }
 	*/
 	@GetMapping("/")
-	public String verWeb(){
+	public String verWeb(Model model){
+		model.addAttribute(, model)
 		return "login";
 	}
 

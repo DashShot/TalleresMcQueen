@@ -19,12 +19,12 @@ public class Mecanico {
     private long id;
 
     private String nombre;
-    private String apellidos;
+  
     
-    private List<Reparacion> listaReparaciones = new ArrayList<>();
+    private List<Reparacion> listaReparaciones;
 
     public Mecanico(){}
-    public Mecanico(String nombre, String apellidos){
+    public Mecanico(String nombre){
         this.nombre = nombre;
 
     }
