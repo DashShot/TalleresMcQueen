@@ -35,7 +35,6 @@ public class Usuario {
     public String getContrasena(){return contrasena;}
     public void setContrasena(String contrasena){this.contrasena = contrasena;}
     
-    //Aqui faltaría poner las listas de reparaciones
 
     //Listas de valoraciones
     public List<Valoraciones> getValoraciones(){return listaValoraciones;}
@@ -47,6 +46,16 @@ public class Usuario {
         listaValoraciones.remove(aux);
         aux.setUsuario(null);
     }
+     //Listas de Reparaciones
+     public List<Reparacion> getReparaciones(){return listaReparaciones;}
+     public void addReparaciones(Reparacion aux){
+         listaReparaciones.add(aux);
+         aux.setUsuario(this);
+     }
+     public void remuveReparaciones(Reparacion aux){
+         listaReparaciones.remove(aux);
+         aux.setUsuario(null);
+     }
     
     @Override
     public String toString(){
