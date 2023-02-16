@@ -38,14 +38,19 @@ public class McQueenWebController {
 		return "index";
     }
 	*/
+	@GetMapping("/")
+	public String verWeb(){
+		return "login";
+	}
+
     // Inicio de sesion
-	@GetMapping("/login")
+	@RequestMapping("/login")
 	public String login() {
 		return "login";
 	}
 
 	// error de inicio de sesion
-	@GetMapping("/loginerror")
+	@RequestMapping("/loginerror")
 	public String loginerror() {
 		return "loginerror";
 	}
