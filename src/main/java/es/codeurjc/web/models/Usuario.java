@@ -6,22 +6,30 @@ import java.util.List;
 //import javax.annotation.Generated;
 //import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 @Entity
+@Table
 public class Usuario {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @Column(name = "PRUEBA")
     private String nombre;
     private String contrasena;
-    private List<Valoraciones> listaValoraciones = new ArrayList<>();
-    private List<Reparacion> listaReparaciones = new ArrayList<>();
+
+    @OneToMany
+    private List<Valoraciones> listaValoraciones;
+    @OneToMany
+    private List<Reparacion> listaReparaciones;
 
     public Usuario(){}
     public Usuario(String nombre, String contrasena){

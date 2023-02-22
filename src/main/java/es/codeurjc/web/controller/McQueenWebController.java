@@ -1,4 +1,4 @@
-package es.codeurjc.web.controller;
+/*/*package es.codeurjc.web.controller;
 
 //import java.util.List;
 
@@ -38,7 +38,9 @@ public class McQueenWebController {
 
 		return "index";
     }
-	*/
+	
+
+	
 	@GetMapping("/")
 	public String verWeb(Model model){
 		model.addAttribute(, model)
@@ -64,7 +66,7 @@ public class McQueenWebController {
 	}
 
 }
-/* 
+ 
 @GetMapping("/")
 public String showReparaciones(Model model){
     model.addAttribute(attributeName: "Reparaciones", McQueenService.findAll());
@@ -73,5 +75,4 @@ public String showReparaciones(Model model){
 @GetMapping("/reparaciones/{id}")
 public String showReparacion(Model model, @PathVariable long id){
     
-}
-*/
+} */
