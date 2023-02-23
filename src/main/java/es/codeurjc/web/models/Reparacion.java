@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.mysql.cj.jdbc.Blob;
@@ -15,6 +16,7 @@ import com.mysql.cj.jdbc.Blob;
 
 
 @Entity
+@Table
 public class Reparacion {
     
     @Id

@@ -1,6 +1,5 @@
 package es.codeurjc.web.models;
 
-import java.util.ArrayList;
 import java.util.List;
 //import org.springframework.stereotype.Indexed;
 //import javax.annotation.Generated;

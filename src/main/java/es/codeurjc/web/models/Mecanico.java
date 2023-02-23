@@ -1,10 +1,8 @@
 package es.codeurjc.web.models;
 
-import java.util.ArrayList;
+
 import java.util.List;
-//import org.springframework.stereotype.Indexed;
-//import javax.annotation.Generated;
-//import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,7 +10,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-
 public class Mecanico {
     
     @Id
@@ -28,6 +25,13 @@ public class Mecanico {
     public Mecanico(String nombre){
         this.nombre = nombre;
 
+    }
+
+    public String getNombre(){
+        return this.nombre;
+    }
+    public void setNombre(String nombre){
+        this.nombre = nombre;
     }
     public List<Reparacion> getReparaciones(){return listaReparaciones;}
     public void addReparacion(Reparacion aux){
