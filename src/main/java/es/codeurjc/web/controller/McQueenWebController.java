@@ -1,3 +1,4 @@
+
 package es.codeurjc.web.controller;
 
 //import java.util.List;
@@ -9,6 +10,7 @@ package es.codeurjc.web.controller;
 
 //import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 //import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
@@ -41,19 +43,31 @@ public class McQueenWebController {
 		return "index";
     }
 	*/
+
+
+	@GetMapping("/")
+	public String verWeb(Model model){
+		//model.addAttribute(, model)
+		return "login";
+	}
+
     // Inicio de sesion
+<<<<<<< HEAD
 	/* 
 	@GetMapping("/")
 	public String inicio() {
 		return "inicio";
 	}
 	@GetMapping("/login")
+=======
+	@RequestMapping("/login")
+>>>>>>> 15d9bdf49b4030a9bc18f1993462f5a3324eb002
 	public String login() {
 		return "login";
 	}
 
 	// error de inicio de sesion
-	@GetMapping("/loginerror")
+	@RequestMapping("/loginerror")
 	public String loginerror() {
 		return "loginerror";
 	}
@@ -65,8 +79,12 @@ public class McQueenWebController {
 	}
 
 }
+<<<<<<< HEAD
 */
 /* 
+=======
+ /* 
+>>>>>>> 15d9bdf49b4030a9bc18f1993462f5a3324eb002
 @GetMapping("/")
 public String showReparaciones(Model model){
     model.addAttribute(attributeName: "Reparaciones", McQueenService.findAll());
@@ -75,5 +93,10 @@ public String showReparaciones(Model model){
 @GetMapping("/reparaciones/{id}")
 public String showReparacion(Model model, @PathVariable long id){
     
+<<<<<<< HEAD
 }
 */
+=======
+} 
+*/
+>>>>>>> 15d9bdf49b4030a9bc18f1993462f5a3324eb002

@@ -1,18 +1,34 @@
 package es.codeurjc.web.models;
 
-import java.util.ArrayList;
 import java.util.List;
 //import org.springframework.stereotype.Indexed;
 //import javax.annotation.Generated;
 //import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
+@Entity
+@Table
 public class Usuario {
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
+    @Column(name = "PRUEBA")
     private String nombre;
     private String contrasena;
-    private List<Valoraciones> listaValoraciones = new ArrayList<>();
+
+    @OneToMany
+    private List<Valoraciones> listaValoraciones;
+    @OneToMany
+    private List<Reparacion> listaReparaciones;
 
     public Usuario(){}
     public Usuario(String nombre, String contrasena){
@@ -25,7 +41,7 @@ public class Usuario {
     public void setNombre(String nombre){this.nombre = nombre;}
     public String getContrasena(){return contrasena;}
     public void setContrasena(String contrasena){this.contrasena = contrasena;}
-    //Aqui faltaría poner las listas de reparaciones
+    
 
     //Listas de valoraciones
     public List<Valoraciones> getValoraciones(){return listaValoraciones;}
@@ -37,6 +53,16 @@ public class Usuario {
         listaValoraciones.remove(aux);
         aux.setUsuario(null);
     }
+     //Listas de Reparaciones
+     public List<Reparacion> getReparaciones(){return listaReparaciones;}
+     public void addReparaciones(Reparacion aux){
+         listaReparaciones.add(aux);
+         aux.setUsuario(this);
+     }
+     public void remuveReparaciones(Reparacion aux){
+         listaReparaciones.remove(aux);
+         aux.setUsuario(null);
+     }
     
     @Override
     public String toString(){
