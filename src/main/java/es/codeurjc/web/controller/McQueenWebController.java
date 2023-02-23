@@ -2,6 +2,7 @@ package es.codeurjc.web.controller;
 
 //import java.util.List;
 
+/*import javax.annotation.PostConstruct;
 //import javax.annotation.PostConstruct;
 //import javax.servlet.http.HttpServletRequest;
 
@@ -16,6 +17,8 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class McQueenWebController {
+	@PostConstruct
+	public void init(){}
 	/* 
     @Autowired
     //private UsuarioRepository userRepository;
@@ -39,6 +42,11 @@ public class McQueenWebController {
     }
 	*/
     // Inicio de sesion
+	/* 
+	@GetMapping("/")
+	public String inicio() {
+		return "inicio";
+	}
 	@GetMapping("/login")
 	public String login() {
 		return "login";
@@ -57,6 +65,7 @@ public class McQueenWebController {
 	}
 
 }
+*/
 /* 
 @GetMapping("/")
 public String showReparaciones(Model model){
