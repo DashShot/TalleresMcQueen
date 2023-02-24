@@ -28,7 +28,7 @@ public class Reparacion {
     @ManyToOne
     private Usuario usuario;
 
-    @ManyToMany(mappedBy = "Reparacion", fetch = FetchType.EAGER);
+    @ManyToMany(mappedBy = "Reparacion", fetch = FetchType.EAGER)
     private List<Mecanico> listamecanico;
 
     private long tiempo;
