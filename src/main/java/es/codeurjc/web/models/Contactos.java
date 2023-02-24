@@ -13,7 +13,7 @@ import javax.persistence.OneToMany;
 public class Contactos {
 
     @Id
-    @GeneratedValue (strategy = GenerationType.AUTO)
+    @GeneratedValue (strategy = GenerationType.AUTO) ///EXISTEN VARIOS TALLERESX
     private long id;
 
     private String direccion;

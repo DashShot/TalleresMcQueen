@@ -10,21 +10,14 @@
     <form action="/">
         <input type="submit" value="Inicio" />
     </form>
-    <form action="usuarios">
-        <input type="submit" value="Usuarios" />
-    </form>
+
     <form action="datos">
-        <input type='text' name='texto' />
-        <input type="submit" value="Datos De Contacto" />
+        <input type="submit" value="Acerca Nuestra" />
     </form>    
     <form action="valoraciones">
-        <input type='text' name='texto' />
-        <input type="submit" value="Valoraciones de Usuarios" />
+        <input type="submit" value="Valoraciones de Nuestros Clientes" />
     </form> 
-    <form action="reparacion">
-        <input type='text' name='texto' />
-        <input type="submit" value="Reparaciones" />
-    </form>
+    
     
     <form action="login">
         <input type="submit" value="Iniciar sesion" />
@@ -33,6 +26,9 @@
     <form action="signup">
         <input type="submit" value="Registrarse" />
     </form>
+    
+    {{#sesionIniciada}}
     <form action="/logout" method="post">
         <input type="submit" value="Cerrar sesión" />
     </form>
+    {{/sesionIniciada}}
