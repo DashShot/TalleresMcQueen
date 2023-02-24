@@ -12,7 +12,12 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
+<<<<<<< HEAD
+		<version>2.7.8</version>
+		<relativePath />
+=======
 		<version>2.7.7</version>
+>>>>>>> 15d9bdf49b4030a9bc18f1993462f5a3324eb002
 	</parent>
 
 	<properties>
