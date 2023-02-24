@@ -8,6 +8,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Valoraciones {
@@ -16,13 +20,18 @@ public class Valoraciones {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @ManyToOne
+    @JsonIgnore
     private Usuario usuario;
+
     private Reparacion reparacion;
+    
     private String texto;
     private int puntuacion; //Las valoraciones va acompañado de un texto y un numero de 1 - 10
 
     public Valoraciones(){}
     public Valoraciones (Usuario usuario,Reparacion reparacion, String texto, int puntuacion){
+        super();
         this.usuario = usuario;
         this.reparacion = reparacion;
         this.texto = texto;

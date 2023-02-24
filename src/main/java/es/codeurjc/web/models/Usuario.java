@@ -1,10 +1,8 @@
 package es.codeurjc.web.models;
 
 import java.util.List;
-//import org.springframework.stereotype.Indexed;
-//import javax.annotation.Generated;
-//import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,24 +12,26 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table
+//@Table
 public class Usuario {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "PRUEBA")
+    //@Column(name = "PRUEBA")
     private String nombre;
     private String contrasena;
 
-    @OneToMany
+    @OneToMany(mappedBy = "Usuarios", cascade = CascadeType.ALL ,orphanRemoval = true)
     private List<Valoraciones> listaValoraciones;
-    @OneToMany
+
+    @OneToMany(mappedBy = "Usuarios", cascade = CascadeType.ALL ,orphanRemoval = true)
     private List<Reparacion> listaReparaciones;
 
     public Usuario(){}
     public Usuario(String nombre, String contrasena){
+        super();
         this.nombre = nombre;
         this.contrasena = contrasena;
     }

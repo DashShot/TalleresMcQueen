@@ -6,14 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
-
-//import org.springframework.boot.autoconfigure.domain.EntityScan;
-//import org.springframework.stereotype.Indexed;
-
-//import javax.annotation.Generated;
-//import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Contactos {
@@ -26,7 +20,7 @@ public class Contactos {
     private String email;
     private long telefono;
 
-    @ManyToMany
+    @OneToMany(mappedBy = "Mecanicos")
     private List<Mecanico> listamecanico;
 
 
@@ -47,17 +41,15 @@ public class Contactos {
     public List<Mecanico> getMecanicos(){return listamecanico;}
     public void addMecanico(Mecanico aux){
         listamecanico.add(aux);
-   //     aux.setReparacion(this);
     }
     public void remuveMecanico(Mecanico aux){
          listamecanico.remove(aux);
-    //     aux.setReparacion(null);
     }
     
     
     @Override
     public String toString(){
-        return this.toString() + "Email del usuario: "+ email + "/ Telefono del usuario: "+ telefono;
+        return this.toString() + "Email del taller: "+ email + "/ Telefono del taller: "+ telefono;
     }
 
 }
