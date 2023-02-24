@@ -1,5 +1,5 @@
 
-package es.codeurjc.web.controller;
+//package es.codeurjc.web.controller;
 
 //import java.util.List;
 
@@ -43,60 +43,3 @@ public class McQueenWebController {
 		return "index";
     }
 	*/
-
-
-	@GetMapping("/")
-	public String verWeb(Model model){
-		//model.addAttribute(, model)
-		return "login";
-	}
-
-    // Inicio de sesion
-<<<<<<< HEAD
-	/* 
-	@GetMapping("/")
-	public String inicio() {
-		return "inicio";
-	}
-	@GetMapping("/login")
-=======
-	@RequestMapping("/login")
->>>>>>> 15d9bdf49b4030a9bc18f1993462f5a3324eb002
-	public String login() {
-		return "login";
-	}
-
-	// error de inicio de sesion
-	@RequestMapping("/loginerror")
-	public String loginerror() {
-		return "loginerror";
-	}
-
-	// Registro
-	@GetMapping("/signup")
-	public String registro() {
-		return "registro";
-	}
-
-}
-<<<<<<< HEAD
-*/
-/* 
-=======
- /* 
->>>>>>> 15d9bdf49b4030a9bc18f1993462f5a3324eb002
-@GetMapping("/")
-public String showReparaciones(Model model){
-    model.addAttribute(attributeName: "Reparaciones", McQueenService.findAll());
-}
-
-@GetMapping("/reparaciones/{id}")
-public String showReparacion(Model model, @PathVariable long id){
-    
-<<<<<<< HEAD
-}
-*/
-=======
-} 
-*/
->>>>>>> 15d9bdf49b4030a9bc18f1993462f5a3324eb002
