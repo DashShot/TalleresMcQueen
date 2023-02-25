@@ -41,7 +41,7 @@ public class WebTallerController {
         
         return "inicio";
     }
-
+    
     //------------------------ Login ---------------------------------------//
     @GetMapping("/login")
     public String login(){
@@ -58,6 +58,6 @@ public class WebTallerController {
         return "loginerror";
     }
     //------------------ Registro -----------------------------------//
-
+    
    
 }
