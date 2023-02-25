@@ -9,4 +9,6 @@ import es.codeurjc.web.repository.ReparacionesRepository;
 public class ReparacionService {
     @Autowired
     private ReparacionesRepository reparacionesRepository;
+
+    
 }
