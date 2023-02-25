@@ -27,8 +27,8 @@ public class ContactosService {
 		return contactosRepository.existsById(id);
 	}
 
-	public void save(Contactos book) {
-		contactosRepository.save(book);
+	public void save(Contactos contactos) {
+		contactosRepository.save(contactos);
 	}
 
 	public void delete(long id) {

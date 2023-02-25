@@ -55,6 +55,10 @@ public class Reparacion {
     public void setUsuario(Usuario usuario){ this.usuario = usuario;}
     public long getTiempo(){return tiempo;}
     public void setTiempo(long tiempo){this.tiempo = tiempo;}
+    public Blob getImagenIni(){return this.imageFileIni;}
+    public void setImagenIni(Blob imagenIni){ this.imageFileIni = imagenIni;}
+    public Blob getImagenFin(){return this.imageFileFin;}
+    public void setImagenFin(Blob imagenFin){ this.imageFileFin = imagenFin;}
     
     public List<Mecanico> getMecanicos(){return listamecanico;}
     public void setMecanicos(List<Mecanico> listameMecanicos){ this.listamecanico = listameMecanicos;}
