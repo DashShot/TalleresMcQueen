@@ -25,6 +25,7 @@ public class Valoraciones {
     private Usuario usuario;
 
     private Reparacion reparacion;
+    private Contactos contactos;
     
     private String texto;
     private int puntuacion; //Las valoraciones va acompañado de un texto y un numero de 1 - 10
@@ -45,6 +46,8 @@ public class Valoraciones {
     public void setTexto(String texto){this.texto =texto;}
     public int getPuntuacion(){return puntuacion;}
     public void setPuntuacion(int puntuacion){this.puntuacion = puntuacion;}
+    public Contactos geContactos(){return this.contactos;}
+    public void setContactos(Contactos contactos){ this.contactos = contactos;}
 
     @Override
     public String toString(){
