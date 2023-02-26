@@ -2,6 +2,7 @@ package es.codeurjc.web.models;
 
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -28,23 +29,24 @@ public class Reparacion {
     @ManyToOne
     private Usuario usuario;
 
-    @ManyToMany(mappedBy = "Reparacion", fetch = FetchType.EAGER)
+    @ManyToMany(mappedBy = "nombre", fetch = FetchType.EAGER)
     private List<Mecanico> listamecanico;
+
+    @Column(columnDefinition = "TEXT")
+    private String tipo;
 
     private long tiempo;
     
     @Lob
     @JsonIgnore
-    private Blob imageFileIni;
+    private Blob imageFile;
 
     
-    @Lob
-    @JsonIgnore
-    private Blob imageFileFin;
 
     public Reparacion(){}
-    public Reparacion(Usuario usuario,long tiempo){
+    public Reparacion(Usuario usuario,String tipo,long tiempo){
         super();
+        this.tipo = tipo;
         this.usuario = usuario;
         this.tiempo = tiempo;
     }
@@ -55,11 +57,11 @@ public class Reparacion {
     public void setUsuario(Usuario usuario){ this.usuario = usuario;}
     public long getTiempo(){return tiempo;}
     public void setTiempo(long tiempo){this.tiempo = tiempo;}
-    public Blob getImagenIni(){return this.imageFileIni;}
-    public void setImagenIni(Blob imagenIni){ this.imageFileIni = imagenIni;}
-    public Blob getImagenFin(){return this.imageFileFin;}
-    public void setImagenFin(Blob imagenFin){ this.imageFileFin = imagenFin;}
-    
+    public Blob getImagen(){return this.imageFile;}
+    public void setImagen(Blob imagen){ this.imageFile = imagen;}
+    public String getTipo(){ return this.tipo;}
+    public void setTipo(String tipo){ this.tipo = tipo;}
+
     public List<Mecanico> getMecanicos(){return listamecanico;}
     public void setMecanicos(List<Mecanico> listameMecanicos){ this.listamecanico = listameMecanicos;}
    

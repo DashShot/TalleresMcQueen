@@ -3,13 +3,16 @@ package es.codeurjc.web.models;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 
 @Entity
+@Table
 public class Contactos {
 
     @Id
@@ -20,7 +23,7 @@ public class Contactos {
     private String email;
     private long telefono;
 
-    @OneToMany(mappedBy = "Mecanicos")
+    @OneToMany(targetEntity = Mecanico.class, mappedBy = "nombre", fetch = FetchType.EAGER)//mappedBy = "Contactos)
     private List<Mecanico> listamecanico;
 
 

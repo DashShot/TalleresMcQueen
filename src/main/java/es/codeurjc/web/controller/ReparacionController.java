@@ -8,12 +8,16 @@ import java.util.Optional;
 import javax.websocket.server.PathParam;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.InputStreamResource;
+import org.springframework.core.io.Resource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.mysql.cj.jdbc.Blob;
@@ -39,6 +43,7 @@ public class ReparacionController {
     Optional<Reparacion> reparacion = reparacionService.findbyID(id);
     if (reparacion.isPresent()){
         model.addAttribute("reparacion", reparacion.get());
+        model.addAttribute("Imagen", reparacion.get().getImagen());
         return "reparacion";
     }
     return "reparaciones";
@@ -54,22 +59,5 @@ public class ReparacionController {
         reparacionService.save(reparacion);
         return "redirect:/reparaciones";
     }
-  /**
-   * @param id
-   * @return
-   * @throws IOException
-   */
-  @GetMapping("/{id}/imagenes")
-  public ResponseEntity<byte[]> verImagen(@PathVariable Long id) throws IOException {
-
-      Optional<Reparacion> reparacion = reparacionService.findbyID(id);
-      if (reparacion.isPresent() && reparacion.get().getImagenIni() != null){
-        Blob imagen = reparacion.get().getImagenIni();
-        HttpHeaders headers = new HttpHeaders(null);
-        headers.setContentType(MediaType.IMAGE_JPEG);
-        headers.setContentLength(imagen.length);
-        return new ResponseEntity<>(imagen, headers, HttpStatus.OK);
-      }
-      return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-  }
+  
 }

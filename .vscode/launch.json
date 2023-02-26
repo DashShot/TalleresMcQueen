@@ -9,6 +9,7 @@
             "projectName": "TalleresMcQueen",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+            "env": {}
         }
     ]
 }

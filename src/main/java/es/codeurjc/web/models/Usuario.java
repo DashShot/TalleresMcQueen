@@ -4,7 +4,9 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -23,17 +25,22 @@ public class Usuario {
     private String nombre;
     private String contrasena;
 
-    @OneToMany(mappedBy = "Usuarios", cascade = CascadeType.ALL ,orphanRemoval = true)
+    @ElementCollection(fetch = FetchType.EAGER)
+    private List<String> roles;
+
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL ,orphanRemoval = true)
     private List<Valoraciones> listaValoraciones;
 
-    @OneToMany(mappedBy = "Usuarios", cascade = CascadeType.ALL ,orphanRemoval = true)
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL ,orphanRemoval = true)
     private List<Reparacion> listaReparaciones;
 
+
     public Usuario(){}
-    public Usuario(String nombre, String contrasena){
+    public Usuario(String nombre, String contrasena, String... roles){
         super();
         this.nombre = nombre;
         this.contrasena = contrasena;
+        this.roles = List.of(roles);
     }
     public long getId(){return id;}
     public void setId(long id){this.id = id;}
@@ -41,7 +48,8 @@ public class Usuario {
     public void setNombre(String nombre){this.nombre = nombre;}
     public String getContrasena(){return contrasena;}
     public void setContrasena(String contrasena){this.contrasena = contrasena;}
-    
+    public List<String> getRoles(){ return this.roles;}
+    public void setRoles(List<String> roles){this.roles = roles;}
 
     //Listas de valoraciones
     public List<Valoraciones> getValoraciones(){return listaValoraciones;}

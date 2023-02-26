@@ -4,13 +4,20 @@ import java.security.Principal;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import es.codeurjc.web.models.Usuario;
+import es.codeurjc.web.service.UsuarioService;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 @Controller
 public class WebTallerController {
@@ -33,7 +40,7 @@ public class WebTallerController {
     
 	}
 
-    //--------------- Pantalla inicial -----------------------------// 
+    //--------------- Pantalla inicial ----------------------------------// 
     @GetMapping("/")
     public String inicio(Model model){
 
@@ -42,22 +49,37 @@ public class WebTallerController {
         return "inicio";
     }
     
-    //------------------------ Login ---------------------------------------//
-    @GetMapping("/login")
+    //------------------------ Login ----------------------------------------//
+    @RequestMapping("/login")
     public String login(){
         return "login";
     }
-    @PostMapping("/")
-    public String loginCorrecto(Model model){
-        //model.addAttribute("sesionIniciada",true);
-        return "inicio";
-    }
 
-    @GetMapping("/loginerror")
+    @RequestMapping("/loginerror")
     public String loginerror(){
         return "loginerror";
     }
-    //------------------ Registro -----------------------------------//
+    //------------------ Registro ------------------------------------------------//
     
-   
+   //---------------------- Usuario -----------------------------------------------//
+   @Autowired
+    private UsuarioService userService;
+
+    @GetMapping("/verDatosUsuario")
+    public String verDatos(Model model, HttpServletRequest request){
+        
+        Principal principal = request.getUserPrincipal();
+        
+        model.addAttribute("Nombre",principal.getName());
+     
+        return "verDatosUsuario";
+    }
+
+    @PostMapping("/editarDatos")
+    public String editarDatos(Model model, HttpServletRequest req) {
+        
+        
+        return "cambiarDatosUsuario";
+    }
+    
 }

@@ -1,7 +1,14 @@
 package es.codeurjc.web.controller;
 
-import org.springframework.stereotype.Controller;
+import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import es.codeurjc.web.models.Valoraciones;
 import es.codeurjc.web.service.ValoracionesService;
 
 @Controller
@@ -9,24 +16,24 @@ public class ValoracionesController {
     @Autowired
     private ValoracionesService valoracionesService;
 
-    @GetMapping("/post/crear-valoracion{id}")
+    @GetMapping("/crear-valoracion{id}")
     public String crearValoracion(Model model){
         model.addAttribute("valoraciones",valoracionesService.findAll());
         return "valoraciones/nueva_valoracion";
     }
 
-    @GetMapping("post/crear-valoracion/valoracion-creada/{id}")
+    @GetMapping("/crear-valoracion/valoracion-creada/{id}")
     public String ratingCreate(Model model){
         model.addAttribute("valoraciones",valoracionesService.findAll());
         return "valoraciones/solicitud_completada";
     }
 
-    @GetMapping("/post/ver-valoraciones/{id}")
+    @GetMapping("/ver-valoraciones/{id}")
     public String mostrarContacto(Model model, @PathVariable long id){
-        Optional<Contactos> Contacto = contactosService.findbyID(id);
-        if (Contacto.isPresent()){
-            model.addAttribute("Contacto", Contacto.get());
-            return "Contacto";
+        Optional<Valoraciones> valoracion = valoracionesService.findbyID(id);
+        if (valoracion.isPresent()){
+            model.addAttribute("valoraciones", valoracion.get());
+            return "valoraciones";
         }
         return "ver_valoraciones";
     }
