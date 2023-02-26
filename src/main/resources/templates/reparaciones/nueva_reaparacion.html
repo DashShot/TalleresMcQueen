@@ -1,12 +1,59 @@
 {{>encabezado}}
-
 		<h2>REPARACIONES</h2>
-		<ul class="items">
-			
-		</ul>
-
-		
-		<button onclick="location.href='/nreparacion'">Nueva Reparacion</button>
+		<section id="servicios">
+			<h2>Servicios</h2>
+			<p>Elige el tipo de reparación que necesitas:</p>
+			<ul>
+				<li>
+					<button type="button" data-reparacion="aceite">
+						<img src="/src/main/resources/templates/reparaciones/imagenes/Cambio-de-aceite.jpg" alt="Cambio de aceite">
+						<p>Cambio de aceite</p>
+					</a>
+				</li>
+				<li>
+					<button type="button" data-reparacion="frenos">
+						<img src="/src/main/resources/templates/reparaciones/imagenes/reparacion-frenos.jpg" alt="Reparación de frenos">
+						<p>Reparación de frenos</p>
+					</a>
+				</li>
+				<li>
+					<button type="button" data-reparacion="neumaticos">
+						<img src="/src/main/resources/templates/reparaciones/imagenes/reparacion-neumaticos.jpg" alt="Cambio de neumáticos">
+						<p>Cambio de neumáticos</p>
+					</a>
+				</li>
+				<li>
+					<button type="button" data-reparacion="suspension">
+						<img src="/src/main/resources/templates/reparaciones/imagenes/reparacion-suspension.jpg" alt="Reparación de la suspensión">
+						<p>Reparación de la suspensión</p>
+					</a>
+				</li>
+				<li>
+					<button type="button" data-reparacion="motor">
+						<img src="/src/main/resources/templates/reparaciones/imagenes/reparacion-motor.jpg" alt="Reparación de motor">
+						<p>Reparación de motor</p>
+					</a>
+				</li>
+				<li>
+					<button type="button" data-reparacion="transmision">
+						<img src="/src/main/resources/templates/reparaciones/imagenes/reparacion-transmision.jpg" alt="Reparación de transmisión">
+						<p>Reparación de transmisión</p>
+					</a>
+				</li>
+				<li>
+					<button type="button" data-reparacion="electronica">
+						<img src="/src/main/resources/templates/reparaciones/imagenes/reparacion-electronica.jpg" alt="Reparación de sistemas electrónicos">
+						<p>Reparación de sistemas electrónicos</p>
+					</a>
+				</li>
+			</ul>
+		</section>
+		<section id="seleccion">
+			<h2>Reparaciones seleccionadas</h2>
+			<ul id="lista-reparaciones"></ul>
+			<button id="boton-inicio" disabled>Iniciar reparación</button>
+		</section>
+		<button onclick="location.href='/ver_reparaciones'">VER REPARACIONES</button>
 		
 
 {{>piedepagina}}
