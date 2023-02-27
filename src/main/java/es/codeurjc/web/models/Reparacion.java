@@ -13,6 +13,9 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 //import javax.persistence.Table;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.mysql.cj.jdbc.Blob;
 
@@ -30,6 +33,7 @@ public class Reparacion {
     private Usuario usuario;
 
     @ManyToMany(mappedBy = "nombre", fetch = FetchType.EAGER)
+    @Fetch(value = FetchMode.SUBSELECT)
     private List<Mecanico> listamecanico;
 
     @Column(columnDefinition = "TEXT")
