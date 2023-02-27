@@ -21,8 +21,9 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "PRUEBA")
+    @Column(name = "Nombre")
     private String nombre;
+
     private String contrasena;
 
     @ElementCollection(fetch = FetchType.EAGER)

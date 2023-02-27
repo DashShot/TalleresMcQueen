@@ -6,4 +6,6 @@ import es.codeurjc.web.models.Usuario;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
     
+    Usuario getByNombre(String nombre);
+    
 }

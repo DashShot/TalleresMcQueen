@@ -5,19 +5,23 @@ import java.security.Principal;
 import javax.servlet.http.HttpServletRequest;
 
 //import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+
+//import es.codeurjc.web.repository.UsuarioRepository;
 
 //import es.codeurjc.web.service.UsuarioService;
 
 
 @Controller
 public class WebTallerController {
-    
+
+    //@Autowired
+    //private UsuarioRepository usuarioRepository;
+    /* 
     @ModelAttribute
 	public void addAttributes(Model model, HttpServletRequest request) {
         
@@ -35,17 +39,33 @@ public class WebTallerController {
         }
     
 	}
-
+    */
     //--------------- Pantalla inicial ----------------------------------// 
+    
     @GetMapping("/")
-    public String inicio(Model model){
+    public String inicio(){
 
         //model.addAttribute("sesionIniciada",false);
         
         return "inicio";
     }
-    
+    /* 
+    @GetMapping("/")
+    @RequestMapping(method = RequestMethod.GET)
+    public String inicio(Model model, HttpServletRequest request){
+        if(request.getUserPrincipal() != null){
+            String nombre = request.getUserPrincipal().getName();
+            Usuario usr = usuarioRepository.getByNombre(nombre);
+
+            model.addAttribute("nombre", usr.getNombre());
+        }else{
+            model.addAttribute("nombre", "INVITADO");
+        }
+        return "inicio";
+    }
+    */
     //------------------------ Login ----------------------------------------//
+    /* 
     @RequestMapping("/login")
     public String login(){
         return "login";
@@ -55,6 +75,7 @@ public class WebTallerController {
     public String loginerror(){
         return "loginerror";
     }
+    */
     //------------------ Registro ------------------------------------------------//
     
    //---------------------- Usuario -----------------------------------------------//
