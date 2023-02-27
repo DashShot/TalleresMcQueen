@@ -4,19 +4,15 @@ import java.security.Principal;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
-import es.codeurjc.web.models.Usuario;
-import es.codeurjc.web.service.UsuarioService;
-import org.springframework.web.bind.annotation.RequestBody;
+//import es.codeurjc.web.service.UsuarioService;
 
 
 @Controller
@@ -62,8 +58,8 @@ public class WebTallerController {
     //------------------ Registro ------------------------------------------------//
     
    //---------------------- Usuario -----------------------------------------------//
-   @Autowired
-    private UsuarioService userService;
+   //@Autowired
+   // private UsuarioService userService;
 
     @GetMapping("/verDatosUsuario")
     public String verDatos(Model model, HttpServletRequest request){

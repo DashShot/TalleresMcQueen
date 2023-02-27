@@ -14,14 +14,14 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-//@Table
+@Table
 public class Usuario {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    //@Column(name = "PRUEBA")
+    @Column(name = "PRUEBA")
     private String nombre;
     private String contrasena;
 
