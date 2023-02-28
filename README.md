@@ -23,6 +23,7 @@ FUNCIONALIDADES DEL SERVICIO INTERNO:
  - Envío de correos electónicos en la creación de cuentas mediante el registro y confirmación de esta, el estado de las piezas y actualización de ofertas y avisos de subidas en el precio total (si varía en función de las horas o de la necesidad piezas nuevas).
 
 ----------ACTUALIZACIONES FASE 2-----------
+
 CAPTURAS DE PANTALLA:
 
 DIAGRAMA DE NAVEGACION:
