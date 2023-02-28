@@ -22,3 +22,14 @@ ENTIDADES PRINCIPALES:
 FUNCIONALIDADES DEL SERVICIO INTERNO:
  - Envío de correos electónicos en la creación de cuentas mediante el registro y confirmación de esta, el estado de las piezas y actualización de ofertas y avisos de subidas en el precio total (si varía en función de las horas o de la necesidad piezas nuevas).
 
+----------ACTUALIZACIONES FASE 2-----------
+
+CAPTURAS DE PANTALLA:
+
+DIAGRAMA DE NAVEGACION:
+
+MODELO DE DATOS:
+ 
+ --->DIAGRAMA ENTIDAD RELACION
+ ![Modelo](https://user-images.githubusercontent.com/123817881/221811846-f557af82-69d2-4278-9ab9-7c29493e3325.png)
+
