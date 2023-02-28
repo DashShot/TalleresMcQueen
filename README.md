@@ -57,6 +57,9 @@ Reparaciones:
 
 DIAGRAMA DE NAVEGACION:
 
+![image](https://user-images.githubusercontent.com/119364189/221834298-f54f2eb1-139c-4b41-8cd1-0cc26d0940e7.png)
+
+
 MODELO DE DATOS:
  
  --->DIAGRAMA ENTIDAD RELACION
