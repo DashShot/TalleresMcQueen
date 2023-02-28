@@ -25,6 +25,7 @@ FUNCIONALIDADES DEL SERVICIO INTERNO:
 ----------ACTUALIZACIONES FASE 2-----------
 
 CAPTURAS DE PANTALLA:
+
 Inicio:
 
 ![image](https://user-images.githubusercontent.com/119364189/221829431-bf40cf87-82f7-4c8d-98fb-4532b7b9f006.png)
