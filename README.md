@@ -25,6 +25,34 @@ FUNCIONALIDADES DEL SERVICIO INTERNO:
 ----------ACTUALIZACIONES FASE 2-----------
 
 CAPTURAS DE PANTALLA:
+Inicio:
+
+![image](https://user-images.githubusercontent.com/119364189/221829431-bf40cf87-82f7-4c8d-98fb-4532b7b9f006.png)
+
+Acerca de Nosotros:
+
+![image](https://user-images.githubusercontent.com/119364189/221829730-97354276-e215-4485-b958-5026b63eeac2.png)
+
+
+Valoraciones:
+
+![image](https://user-images.githubusercontent.com/119364189/221829268-bda26fd3-63c3-4a82-aedf-2f737af95391.png)
+  
+  Crear Valoracion:
+  
+  ![image](https://user-images.githubusercontent.com/119364189/221829974-a3d9ba20-e952-4306-986a-57eecb4328ee.png)
+
+  Exito al crear Valoracion:
+  
+  ![image](https://user-images.githubusercontent.com/119364189/221830119-1295963e-e550-44ef-9d23-5f74670f7232.png)
+
+Reparaciones:
+
+![image](https://user-images.githubusercontent.com/119364189/221830279-4652a52b-06e0-4d9e-b954-921dca5a9deb.png)
+
+  Hacer una nueva Reparacion:
+  
+  ![image](https://user-images.githubusercontent.com/119364189/221830421-0ed25c80-735b-461e-8a32-9802de2e1678.png)
 
 DIAGRAMA DE NAVEGACION:
 
