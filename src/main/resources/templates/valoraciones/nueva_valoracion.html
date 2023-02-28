@@ -1,28 +1,30 @@
 {{>encabezado}}
 
 <h1>Nueva Valoracion</h1>
-<p>Hola {{nombreuser}}, estás en la pestaña de {{tipo}}</p>
 
-<form action="valoracion-creada/{{id}}" method="post">
-<p>Hola {{nombreuser}}, estás en la pestaña de {{tipo}}</p>
-
-<form action="valoracion-creada/{{id}}" method="post">
-	
-	<p>Valoracion:</p>
+	<p>Valoracion:</p>	
 	<p><textarea name='texto' rows='10' cols='50' style="resize:none"></textarea></p>
-		
-	<p>Puntuación:</p>
-	<select name='puntuacion'>
-		<option>0</option>
-		<option>1</option>
-		<option>2</option>
-		<option>3</option>
-		<option>4</option>
-		<option>5</option>
-	</select>	
-	<input type="hidden" name="_csrf" value="{{token}}"/>
-	<input type ='submit' value='Enviar'>
-	<p><a href="/ver-valoraciones/{id}">VER VALORACIONES</a></p>
-	
+
+    <p>Puntuación:</p>
+    <select name='puntuacion'>
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+		<option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+    </select>
+    </from>
+    <form action="/Valoraciones/CrearValoracion/Exito" method="post">
+        <input type ='submit' value='Enviar'>
+    </form>
+    
 </form>
-{{>piepagina}}
+	
+
+{{>piedepagina}}

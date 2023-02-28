@@ -1,11 +1,13 @@
-{{>encabezado}}
-<body>
-    <section id="inicio">
-        <h1>Bienvenido a nuestro taller de reparaciones</h1>
-        <img src="/src/main/resources/static/Talleres Mc.Queen.jpg" alt="Reparaciones de vehículos">
-        <p>Ofrecemos reparaciones de calidad para cualquier tipo de vehículo. Nuestro equipo de técnicos altamente capacitados está 			listo para ayudarte con cualquier problema que puedas tener con tu coche.</p>
-        <button>Reparaciones en curso</button>
-        <button>Nueva reparación</button>
-    </section> 
-</body>
-{{>piedepagina}}
+<!DOCTYPE html>
+<html>
+    {{>encabezado}}
+    <body>
+            <h1>Bienvenido a nuestro taller de reparaciones</h1>
+            <p>Ofrecemos reparaciones de calidad para cualquier tipo de vehículo. Nuestro equipo de técnicos altamente capacitados está             listo para ayudarte con cualquier problema que puedas tener con tu coche.</p>
+            <img th:src="/static/images/TalleresMcQueen.jpg" width="200" height="200">
+            <button>Reparaciones en curso</button>
+            <button>Nueva reparación</button>
+         
+    </body>
+    {{>piedepagina}}
+</html>

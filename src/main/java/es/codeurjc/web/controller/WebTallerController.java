@@ -45,7 +45,7 @@ public class WebTallerController {
     @GetMapping("/")
     public String inicio(){
 
-        //model.addAttribute("sesionIniciada",false);
+        //model.addAttribute("Imgen",false);
         
         return "inicio";
     }

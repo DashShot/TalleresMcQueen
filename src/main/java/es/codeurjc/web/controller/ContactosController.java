@@ -20,7 +20,7 @@ public class ContactosController {
     @GetMapping("/Contactos")
     public String mostrarContactos(Model model){
         model.addAttribute("talleres",contactosService.findAll());
-        return "Contactos";
+        return "contactos/vercontactos";
     }
 
     @GetMapping("/Contactos/{id}")

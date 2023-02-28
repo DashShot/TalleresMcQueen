@@ -3,10 +3,13 @@
 		<h1>Valoraciones</h1>
 		<ul class="items">
 			{{#valoraciones}}
-			<li><a href="/post/ver-valoraciones/{id}">{{texto}}</a></li>
+			<li><a href="/Valoraciones/{id}">{{texto}}</a></li>
 			{{/valoraciones}}
 		</ul>
 
+		<form action="/Valoraciones/CrearValoracion">
+			<input type="submit" value="Crear Valoracion" />
+		</form> 
 
 
 {{>piedepagina}}

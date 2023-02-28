@@ -13,7 +13,7 @@ public class Valoraciones {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
     @ManyToOne
     @JsonIgnore

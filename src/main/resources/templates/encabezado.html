@@ -11,24 +11,12 @@
         <input type="submit" value="Inicio" />
     </form>
 
-    <form action="Contactos">
+    <form action="/Contactos" method="get">
         <input type="submit" value="Acerca Nuestra" />
     </form>    
-    <form action="Valoraciones">
+    
+    <form action="/Valoraciones">
         <input type="submit" value="Valoraciones de Nuestros Clientes" />
     </form> 
     
     
-    <form action="login">
-        <input type="submit" value="Iniciar sesion" />
-    </form>
-    
-    <form action="signup">
-        <input type="submit" value="Registrarse" />
-    </form>
-    
-    {{#sesionIniciada}}
-    <form action="/logout" method="post">
-        <input type="submit" value="Cerrar sesión" />
-    </form>
-    {{/sesionIniciada}}
