@@ -19,18 +19,17 @@ import es.codeurjc.web.models.Reparacion;
 import es.codeurjc.web.service.ReparacionService;
 
 @Controller
-@RequestMapping("/reparaciones")
 public class ReparacionController {
     
   @Autowired
   private ReparacionService reparacionService;
 
-  @GetMapping
-  public String reparaciones(Model model){
-      model.addAttribute("reparaciones", reparacionService.findAll());
-      return "reparaciones";
+  @GetMapping("/Reparacion")
+  public String reparaciones(){
+      
+      return "reparaciones/nueva_reparacion";
   }
-
+/* 
   @GetMapping("/{id}")
   public String verReparacion(Model model, @PathVariable long id){
     Optional<Reparacion> reparacion = reparacionService.findbyID(id);
@@ -41,7 +40,8 @@ public class ReparacionController {
     }
     return "reparaciones";
   }
-  @GetMapping("/nueva_reparacion")
+*/
+  @GetMapping("/Reparacion/NuevaReparacion")
     public String nuevaReparacion(Model model) {
         model.addAttribute("reparacion", new Reparacion());
         return "nueva_reparacion";

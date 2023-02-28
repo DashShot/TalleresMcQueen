@@ -10,16 +10,20 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import es.codeurjc.web.models.Contactos;
 import es.codeurjc.web.service.ContactosService;
+import es.codeurjc.web.service.MecanicoService;
 
 @Controller
 public class ContactosController {
     
     @Autowired
     private ContactosService contactosService;
+    @Autowired
+    private MecanicoService mecanicoService;
 
     @GetMapping("/Contactos")
     public String mostrarContactos(Model model){
         model.addAttribute("talleres",contactosService.findAll());
+        model.addAttribute("mecanicos", mecanicoService.findAll());
         return "contactos/vercontactos";
     }
 
