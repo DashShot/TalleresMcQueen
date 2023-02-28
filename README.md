@@ -28,32 +28,33 @@ CAPTURAS DE PANTALLA:
 
 Inicio:
 
-![image](https://user-images.githubusercontent.com/119364189/221829431-bf40cf87-82f7-4c8d-98fb-4532b7b9f006.png)
+![image](https://user-images.githubusercontent.com/119364189/221859059-6ac7daec-92f0-4aa1-a8cd-fae9b5781c42.png)
+
 
 Acerca de Nosotros:
 
-![image](https://user-images.githubusercontent.com/119364189/221829730-97354276-e215-4485-b958-5026b63eeac2.png)
-
+![image](https://user-images.githubusercontent.com/119364189/221859204-d12b7ae3-1d58-4d40-be0c-e6ef460872cf.png)
 
 Valoraciones:
 
-![image](https://user-images.githubusercontent.com/119364189/221829268-bda26fd3-63c3-4a82-aedf-2f737af95391.png)
+![image](https://user-images.githubusercontent.com/119364189/221859309-0a76a56e-21a6-4791-8d6f-fe3cacb32141.png)
+
   
   Crear Valoracion:
   
-  ![image](https://user-images.githubusercontent.com/119364189/221829974-a3d9ba20-e952-4306-986a-57eecb4328ee.png)
+ ![image](https://user-images.githubusercontent.com/119364189/221859380-4a3eba18-176f-49c1-95c5-aa589a866a24.png)
 
   Exito al crear Valoracion:
-  
-  ![image](https://user-images.githubusercontent.com/119364189/221830119-1295963e-e550-44ef-9d23-5f74670f7232.png)
+ 
+  ![image](https://user-images.githubusercontent.com/119364189/221859466-2fbe5904-332c-4a39-a4f4-2c4b1c249dc4.png)
 
 Reparaciones:
 
-![image](https://user-images.githubusercontent.com/119364189/221830279-4652a52b-06e0-4d9e-b954-921dca5a9deb.png)
+![image](https://user-images.githubusercontent.com/119364189/221859548-1286b8f9-eee1-45f6-a637-c3bf42566052.png)
+
 
   Hacer una nueva Reparacion:
   
-  ![image](https://user-images.githubusercontent.com/119364189/221830421-0ed25c80-735b-461e-8a32-9802de2e1678.png)
 
 DIAGRAMA DE NAVEGACION:
 
