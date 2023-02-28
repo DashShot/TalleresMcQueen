@@ -2,11 +2,18 @@
 
 <h1>Nueva Valoracion</h1>
 
+    <a>Selecciona usuruaio:</a>
+    <select name = 'usuario'>
+        {{#usuario}}
+        <option>{{nombre}} </option>
+        {{/usuario}}
+    </select>
+    <form action="/Valoraciones/CrearValoracion/Exito" method="post">
 	<p>Valoracion:</p>	
 	<p><textarea name='texto' rows='10' cols='50' style="resize:none"></textarea></p>
 
     <p>Puntuación:</p>
-    <select name='puntuacion'>
+    <select  name='puntuacion'>
         <option>0</option>
         <option>1</option>
         <option>2</option>
@@ -19,12 +26,14 @@
         <option>9</option>
         <option>10</option>
     </select>
-    </from>
-    <form action="/Valoraciones/CrearValoracion/Exito" method="post">
-        <input type ='submit' value='Enviar'>
-    </form>
+
+  
+
+    <input type ='submit' value='Enviar'>
     
+
 </form>
+    
 	
 
 {{>piedepagina}}

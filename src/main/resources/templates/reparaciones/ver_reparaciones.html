@@ -1,11 +1,14 @@
 {{>encabezado}}
 
-		<h1>Reparaciones en Curso</h1>
+		<h1>Reparaciones Realizadas</h1>
 		<ul class="items">
 			{{#reparaciones}}
-			<li><a href="/Reparacion/{id}">{{texto}}</a></li>
+			<li>{{usuario}} <br> {{tipo}} - Tiempo tardado: {{tiempo}} min </li>
 			{{/reparaciones}}
 		</ul>
 
+		<form action="/Reparacion/HacerReparacion">
+			<input type="submit" value="Hacer una nueva Reparacion" />
+		</form> 
 
 {{>piedepagina}}
