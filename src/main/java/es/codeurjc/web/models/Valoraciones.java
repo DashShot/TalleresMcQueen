@@ -23,6 +23,11 @@ public class Valoraciones {
     private int puntuacion; //Las valoraciones va acompañado de un texto y un numero de 1 - 10
 
     public Valoraciones(){}
+    public Valoraciones ( String texto, int puntuacion){
+        super();
+        this.texto = texto;
+        this.puntuacion = puntuacion;
+    }
     public Valoraciones (Usuario usuario, String texto, int puntuacion){
         super();
         this.usuario = usuario;

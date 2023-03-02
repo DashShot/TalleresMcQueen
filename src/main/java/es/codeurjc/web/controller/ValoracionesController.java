@@ -1,25 +1,33 @@
 package es.codeurjc.web.controller;
 
+import java.util.List;
+
 //import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 //import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import es.codeurjc.web.models.Usuario;
 //import es.codeurjc.web.models.Usuario;
 import es.codeurjc.web.models.Valoraciones;
 import es.codeurjc.web.repository.UsuarioRepository;
+import es.codeurjc.web.service.UsuarioService;
 import es.codeurjc.web.service.ValoracionesService;
+import io.micrometer.core.ipc.http.HttpSender.Response;
 
 @Controller
 public class ValoracionesController {
     @Autowired
     private ValoracionesService valoracionesService;
     @Autowired
-    private UsuarioRepository usuarioRepository;
+    private UsuarioService usuarioService;
 
     //Todas las valoraciones
     @GetMapping("/Valoraciones")
@@ -31,8 +39,18 @@ public class ValoracionesController {
      //Pagina de crear una Valoracion
      @GetMapping("/Valoraciones/CrearValoracion")
      public String crearValoracion(Model model){
-        model.addAttribute("usuario", usuarioRepository.findAll());
+
+        model.addAttribute("usuario", usuarioService.findAll());
          return "valoraciones/nueva_valoracion";
+     }
+
+     @PostMapping("/Valoraciones/CrearValoracion/Exito")
+     public String  crearValoracion(@RequestParam Long usuarioID , Valoraciones valoraciones){
+        
+        valoraciones.setUsuario(usuarioService.findbyID(usuarioID).get());
+        valoracionesService.save(valoraciones);
+        
+        return "redirect:/Valoraciones";
      }
 /* 
     //Guardado de una Valoracion

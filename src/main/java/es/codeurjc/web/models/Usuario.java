@@ -29,7 +29,7 @@ public class Usuario {
     @ElementCollection(fetch = FetchType.EAGER)
     private List<String> roles;
 
-    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL ,orphanRemoval = true)
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL ,orphanRemoval = true) //Cambiar en valoraciones
     private List<Valoraciones> listaValoraciones;
 
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL ,orphanRemoval = true)
