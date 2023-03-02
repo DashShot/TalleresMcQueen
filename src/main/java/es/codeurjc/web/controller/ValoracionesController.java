@@ -34,7 +34,7 @@ public class ValoracionesController {
         model.addAttribute("usuario", usuarioRepository.findAll());
          return "valoraciones/nueva_valoracion";
      }
-
+/* 
     //Guardado de una Valoracion
     @PostMapping("/Valoraciones/CrearValoracion/Exito")
     public String crearValoracion(Model model , Valoraciones val){
