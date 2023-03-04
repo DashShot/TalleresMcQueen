@@ -48,6 +48,13 @@ public class Reparacion {
     
 
     public Reparacion(){}
+    
+    public Reparacion(long tiempo, String tipo){
+        super();
+        this.tiempo = tiempo;
+        this.tipo = tipo;
+       
+    }
     public Reparacion(Usuario usuario,String tipo,long tiempo){
         super();
         this.tipo = tipo;

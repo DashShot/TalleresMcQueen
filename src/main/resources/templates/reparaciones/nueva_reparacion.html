@@ -1,54 +1,75 @@
 {{>encabezado}}
 
 		<h2>REPARACIONES</h2>
-		<section id="servicios">
+	
+		<a>Selecciona usuario:</a>
+		<select name="usuarioID" >
+			{{#usuario}}
+			<option value ="{{id}}">{{nombre}} </option>
+			{{/usuario}}
+		</select>
+		
+	
 			<h2>Servicios</h2>
 			<p>Elige el tipo de reparación que necesitas:</p>
 			<ul>
-				
-					<button type="button" data-reparacion="aceite">
+					<button onclick="muestraRep('Aceite',15)" data-="Aceite">
 						<img src="https://raw.githubusercontent.com/DashShot/TalleresMcQueen/main/src/main/resources/templates/reparaciones/imagenes/Cambio-de-aceite.jpg	" alt="Cambio de aceite" width="100" height="100">
 						<p>Cambio de aceite</p>
+					</button>
 					
 				
 				
-					<button type="button" data-reparacion="frenos">
+					<button onclick="muestraRep('Frenos',20)" data-="Frenos">
 						<img src="https://raw.githubusercontent.com/DashShot/TalleresMcQueen/main/src/main/resources/templates/reparaciones/imagenes/reparacion-frenos.jpg" alt="Reparación de frenos" width="100" height="100">
 						<p>Reparación de frenos</p>
-					
+					</button>
 				
 				
-					<button type="button" data-reparacion="neumaticos">
+					<button onclick="muestraRep('Neumáticos',10)" data-="Neumáticos">
 						 <img src="https://raw.githubusercontent.com/DashShot/TalleresMcQueen/main/src/main/resources/templates/reparaciones/imagenes/reparacion-neumaticos.jpg" alt="Cambio de neumáticos" width="100" height="100"> 
 						<p>Cambio de neumáticos</p>
-					
+					</button>
 				
-					<button type="button" data-reparacion="suspension">
+					<button onclick="muestraRep('Suspensión',20)" data-="Suspensión">
 						<img src="https://raw.githubusercontent.com/DashShot/TalleresMcQueen/main/src/main/resources/templates/reparaciones/imagenes/reparacion-suspension.jpg" alt="Reparación de la suspensión" width="100" height="100">
 						<p>Reparación de la suspensión</p>
+					</button>
 					
 				
-					<button type="button" data-reparacion="motor">
+					<button onclick="muestraRep('Motor',50)" data-="Motor"> 
 						<img src="https://raw.githubusercontent.com/DashShot/TalleresMcQueen/main/src/main/resources/templates/reparaciones/imagenes/reparacion-motor.jpg" alt="Reparación de motor" width="100" height="100">
 						<p>Reparación de motor</p>
+					</button>
 				
-					<button type="button" data-reparacion="transmision">
+					<button onclick="muestraRep('Transmisión',30)" data-="Transmisión">
 						<img src="https://raw.githubusercontent.com/DashShot/TalleresMcQueen/main/src/main/resources/templates/reparaciones/imagenes/reparacion-transmision.jpg" alt="Reparación de transmisión" width="100" height="100">
 						<p>Reparación de transmisión</p>
-				
-					<button type="button" data-reparacion="electronica">
+					</button>
+					<button onclick="muestraRep('Sistemas Electrónicos',20)" data-="Sistemas electrónicos">
 						<img src="https://raw.githubusercontent.com/DashShot/TalleresMcQueen/main/src/main/resources/templates/reparaciones/imagenes/reparacion-electronica.jpg" alt="Reparación de sistemas electrónicos" width="100" height="100">
 						<p>Reparación de sistemas electrónicos</p>
-					
+					</button>
 				</li>
 			</ul>
 
-			<p>Introduce una foto de tu vehículo:</p>
-				
-		</section>
-		<section id="seleccion">
-			<h2>Reparaciones seleccionadas</h2>
-			<ul id="lista-reparaciones"></ul>
-			<button id="boton-inicio" disabled>Iniciar reparación</button>
-		</section>
+			<h2>Reparaciones Selecionadas:</h2>
+			<textarea id="resultado" rows="10"></textarea>
+
+	
+		<script>
+			function muestraRep(Rep, num) {
+    var resultado = document.getElementById("resultado");
+    var boton = document.querySelector("button[data-='" + Rep + "']");
+    if (boton.classList.contains("activo")) {
+        boton.classList.remove("activo");
+        resultado.value = resultado.value.replace(num + "min - " + Rep + "\n", "");
+    } else {
+        boton.classList.add("activo");
+        resultado.value += num + "min - " + Rep + "\n";
+    }
+}
+		</script>
+
+		<button id="boton-inicio" disabled>Iniciar reparación</button>	
 {{>piedepagina}}
