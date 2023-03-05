@@ -59,17 +59,17 @@
 	
 		<script>
 			function muestraRep(Rep, num) {
-    var resultado = document.getElementById("resultado");
-    var boton = document.querySelector("button[data-='" + Rep + "']");
-    if (boton.classList.contains("activo")) {
-        boton.classList.remove("activo");
-        resultado.value = resultado.value.replace(num + "min - " + Rep + "\n", "");
-    } else {
-        boton.classList.add("activo");
-        resultado.value += num + "min - " + Rep + "\n";
-    }
-}
+				var resultado = document.getElementById("resultado");
+				var boton = document.querySelector("button[data-='" + Rep + "']");
+				if (boton.classList.contains("activo")) {
+					boton.classList.remove("activo");
+					resultado.value = resultado.value.replace(num + "min - " + Rep + "\n", "");
+				} else {
+					boton.classList.add("activo");
+					resultado.value += num + "min - " + Rep + "\n";
+				}
+			}
 		</script>
 
-		<button id="boton-inicio" disabled>Iniciar reparación</button>	
+		<button action="/Reparaciones/curso" method="get">Iniciar reparación</button>	
 {{>piedepagina}}

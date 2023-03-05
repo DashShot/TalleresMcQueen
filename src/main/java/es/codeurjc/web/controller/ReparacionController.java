@@ -51,6 +51,10 @@ public class ReparacionController {
     
     return "redirect:/Reparacion";
   }
+  @GetMapping ("/Reparaciones/curso")//cambiar por {id}
+  public String verReparacion(){
+    return "reparaciones/reparando";
+  }
   /* 
   @GetMapping("/{id}")
   public String verReparacion(Model model, @PathVariable long id){
