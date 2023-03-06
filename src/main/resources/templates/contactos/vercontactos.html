@@ -1,19 +1,29 @@
+php
+Copy code
+<!DOCTYPE html>
+<html>
 <head>
-    {{>encabezado}}
+	<meta charset="UTF-8">
+	<title>Contactos</title>
+	<link rel="stylesheet" href="/css/encabezado.css">
+	<link rel="stylesheet" href="/css/contactos.css">
 </head>
-
-		<h2>Contactos</h2>
-		<ul class="items">
-			{{#talleres}} 
-			<li><a1> {{direccion}} - {{email}} - {{telefono}} </a1></li>
-			{{/talleres}}
-		</ul>
-		<h2>Mecanicos</h2>
-		<ul class="items">
-			{{#mecanicos}} 
-			<li><a1> {{nombre}}  </a1></li>
-			{{/mecanicos}}
-		</ul>
-<footer>
-			{{>piedepagina}}
-</footer>
+<body>
+	{{>encabezado}}
+	
+	<h2>Contactos</h2>
+	<div class="texto-rojo"></div>
+	<ul class="items">
+		{{#talleres}} 
+		<li><a1> {{direccion}} - {{email}} - {{telefono}} </a1></li>
+		{{/talleres}}
+	</ul>
+	<h2>Mecanicos</h2>
+	<ul class="items">
+		{{#mecanicos}} 
+		<li><a1> {{nombre}}  </a1></li>
+		{{/mecanicos}}
+	</ul>
+	{{>piedepagina}}
+</body>
+</html>

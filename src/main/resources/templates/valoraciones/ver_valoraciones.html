@@ -1,15 +1,31 @@
-{{>encabezado}}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Contactos</title>
 
-		<h1>Valoraciones</h1>
-		<ul class="items">
-			{{#valoraciones}}
-			<li>{{usuario}} - {{texto}}  >>>  [{{puntuacion}}]</li>
-			{{/valoraciones}}
-		</ul>
+	<link rel="stylesheet" href="/css/valoracion.css">
+</head>
+<header>
+	{{>encabezado}}
+</header>
+<body>
+	
 
-		<form action="/Valoraciones/CrearValoracion">
-			<input type="submit" value="Crear Valoracion" />
-		</form> 
+	<h1>Valoraciones</h1>
+	<ul class="items">
+		{{#valoraciones}}
+		<li>{{usuario}}: <p></p><span>Comentario:</span>{{texto}} --> <span>Puntuación:</span>[{{puntuacion}} puntos]</li>
+		{{/valoraciones}}
+	</ul>
+	<p></p>
+	<form action="/Valoraciones/CrearValoracion">
+		<input type="submit" value="Crear Valoracion" />
+	</form>
+	<p></p>
 
-
-{{>piedepagina}}
+	
+</body>
+<footer>
+	{{>piedepagina}}
+</footer>

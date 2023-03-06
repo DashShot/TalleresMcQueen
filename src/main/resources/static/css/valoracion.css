@@ -1,0 +1,173 @@
+@charset "UTF-8";
+.items li {
+    border: 1px solid white;
+    padding: 10px;
+    
+}
+
+.items li:hover {
+    background-color: #f7f7f7;
+}
+
+.items li:active {
+    background-color: red;
+}
+
+.items li a1 {
+    color: white;
+    font-family: Arial, sans-serif;
+    display: block;
+}
+
+.items li:nth-child(odd) {
+    background-color: #1c1c1c;
+}
+
+.items li:nth-child(even) {
+    background-color: #3a3a3a;
+}
+l1 {
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  .items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+  }
+  
+  .contactos {
+    float: left;
+    width: 50%;
+  }
+  
+  .mecanicos {
+    float: right;
+    width: 50%;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, black,red,black); /* Aplica un degradado de arriba hacia abajo desde el rojo hasta el negro */
+    margin: 0;
+    padding: 0;
+    position: relative; /* Permitir que la posición de la imagen se calcule en relación a este elemento */
+    color: white; /* cambia el color del texto a blanco */
+}
+select {
+    font-size: 30px;
+    margin: 0 auto;
+    display: block;
+}
+
+select option {
+    color: black;
+}
+
+select:focus {
+    outline: none;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+}
+
+form input[type="submit"] {
+  background-color: white; /* cambia el color de fondo del botón a blanco */
+  color: black; /* cambia el color del texto del botón a negro */
+  border: none; /* elimina el borde del botón */
+  padding: 10px 20px; /* agrega un poco de espacio alrededor del texto del botón */
+  display: block; /* hace que el botón se muestre como un bloque para poder centrarlo */
+  margin: 0 auto; /* centra el botón horizontalmente */
+}
+.items li span {
+    font-family: Arial, sans-serif;
+    color: yellow;
+  }
+  select, option {
+    color: #FFFFFF;
+    background-color: #000000;
+    border: none;
+    width: 200px;
+    height: 30px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    
+  }
+
+  select[name=usuarioID] {
+    margin-right: 20px;
+  }
+
+  p {
+    color: #FFFFFF;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  /*Nueva valoracion*/
+  .select-box {
+    display: inline-block;
+    margin-right: 20px;
+
+  }
+  
+  .select-box label {
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    margin-left: 40px;
+    margin-right: 20px;
+  }
+  
+  .select-box select {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    margin-left: 40px;
+    margin-right: 20px;
+  }
+  
+  .textarea-box label {
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    margin: 20px;
+    margin-left: 40px;
+    margin-right: 20px;
+  }
+  
+  .textarea-box textarea {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    margin-left: 40px;
+
+    
+  }
+  
+  .button-box {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .button-box input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    
+  }
