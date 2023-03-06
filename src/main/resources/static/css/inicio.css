@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, black,red,black); /* Aplica un degradado de arriba hacia abajo desde el rojo hasta el negro */
@@ -7,8 +8,8 @@ body {
   }
   
   .imagen-fondo {
-    height: calc(100vh - 30px); /* ajusta la altura según la altura del texto y el pie de página */
-    background-image: url("https://raw.githubusercontent.com/DashShot/TalleresMcQueen/main/src/main/resources/static/images/TalleresMcQueen.jpg"); 
+    height: calc(100vh - 100px); /* ajusta la altura según la altura del texto y el pie de página */
+    background-image: url("https://raw.githubusercontent.com/DashShot/TalleresMcQueen/main/src/main/resources/static/imagenes/TalleresMcQueen.jpg"); 
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -20,11 +21,6 @@ body {
     border: 1px solid red;
   }
   
-  header {
-    background: linear-gradient(to bottom, black, red, black);
-    color: #FFFFFF;
-    padding: 10px;
-  }
   
   h1 {
     
@@ -46,13 +42,7 @@ body {
     display: block;
     margin: auto;
   }
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-  }
+
   
   .content {
     background-color: #FF0000;

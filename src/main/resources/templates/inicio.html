@@ -3,40 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <title>Talleres McQueen</title>
-    <link rel="stylesheet" type="text/css" href="css/inicio.css">
-    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/inicio.css" />
   </head>
   <body>
     <header>
-      <h1>TALLERES McQUEEN</h1>
-      <style>
-        form{display: inline;}
-      </style>
-      <p></p>
-
-      <form action="/">
-        <input type="submit" value="Inicio" />
-      </form>
-
-      <form action="/Contactos" method="get">
-        <input type="submit" value="Acerca Nuestra" />
-      </form>    
-      
-      <form action="/Valoraciones" method="get">
-        <input type="submit" value="Valoraciones de Nuestros Clientes" />
-      </form>
-      
-      <form action ="/Reparacion" method="get">
-        <input type="submit" value ="Realizar una Reparacion"/>
-      </form>
-
+        {{>encabezado}}
     </header>
     <div class="texto-rojo">
       <p>Ofrecemos reparaciones de calidad para cualquier tipo de vehículo. <p><p>Nuestro equipo de técnicos altamente capacitados está listo para ayudarte con cualquier problema que puedas tener con tu coche.</p>
     </div>
       <div class="imagen-fondo" > </div> 
     <footer>
-      <a>Creado por David Rodríguez y Aitor García</a>
+        {{>piedepagina}}
     </footer>
   </body>
 </html>
