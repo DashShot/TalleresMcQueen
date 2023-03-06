@@ -1,7 +1,7 @@
 {{>encabezado}}
 
 		<h2>REPARACIONES</h2>
-	
+	<form acction="/Reparaciones/nuevaReparacion" method="post">
 		<a>Selecciona usuario:</a>
 		<select name="usuarioID" >
 			{{#usuario}}
@@ -60,16 +60,25 @@
 		<script>
 			function muestraRep(Rep, num) {
 				var resultado = document.getElementById("resultado");
+				var resultadoInput = document.getElementById("resultado-input");
+				var numInput = document.getElementById("num-input");
 				var boton = document.querySelector("button[data-='" + Rep + "']");
 				if (boton.classList.contains("activo")) {
 					boton.classList.remove("activo");
-					resultado.value = resultado.value.replace(num + "min - " + Rep + "\n", "");
+					resultado.value = resultado.value.replace(Rep + "\n", "");
 				} else {
 					boton.classList.add("activo");
-					resultado.value += num + "min - " + Rep + "\n";
+					resultado.value +=  Rep + "\n";
 				}
-			}
+				resultadoInput.value = resultado.value;
+				numInput.value = num;
+				}
 		</script>
 
-		<button action="/Reparaciones/curso" method="get">Iniciar reparación</button>	
+				
+		<input type="hidden" name="resultado" id="resultado-input">
+		<input type="hidden" name="num" id="num-input">
+		 
+		<input type="submit" value="iniciar reparacion">
+	</form>	
 {{>piedepagina}}

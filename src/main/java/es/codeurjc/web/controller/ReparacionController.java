@@ -44,17 +44,21 @@ public class ReparacionController {
 
 
   @PostMapping("/Reparaciones/nuevaReparacion")
-  public String Reparacion(@RequestParam Long usuarioID ,Reparacion reparacion){
-    
+  public String Reparacion(@RequestParam Long usuarioID ,@RequestParam String resultado, @RequestParam Integer num){
+    Reparacion reparacion = new Reparacion();
     reparacion.setUsuario(usuarioService.findbyID(usuarioID).get());
+    reparacion.setTipo(resultado);
+    reparacion.setTiempo(num);
+
     reparacionService.save(reparacion);
     
-    return "redirect:/Reparacion";
+    return "redirect:/Reparaciones";
   }
-  @GetMapping ("/Reparaciones/curso")//cambiar por {id}
+ /*  @GetMapping ("/Reparaciones/curso")//cambiar por {id}
   public String verReparacion(){
     return "reparaciones/reparando";
   }
+  */
   /* 
   @GetMapping("/{id}")
   public String verReparacion(Model model, @PathVariable long id){
