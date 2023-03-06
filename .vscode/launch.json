@@ -8,7 +8,7 @@
             "mainClass": "es.codeurjc.web.Application",
             "projectName": "TalleresMcQueen",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
             "env": {}
         }
     ]

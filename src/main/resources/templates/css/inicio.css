@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, black,red,black); /* Aplica un degradado de arriba hacia abajo desde el rojo hasta el negro */
+    margin: 0;
+    padding: 0;
+    position: relative; /* Permitir que la posición de la imagen se calcule en relación a este elemento */
+  }
+  
+  .imagen-fondo {
+    height: calc(100vh - 30px); /* ajusta la altura según la altura del texto y el pie de página */
+    background-image: url("https://raw.githubusercontent.com/DashShot/TalleresMcQueen/main/src/main/resources/static/images/TalleresMcQueen.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .texto-rojo {
+    background: linear-gradient(to bottom, black);
+    margin: 20px;
+    padding: 15x;
+    border: 1px solid red;
+  }
+  
+  header {
+    background: linear-gradient(to bottom, black, red, black);
+    color: #FFFFFF;
+    padding: 10px;
+  }
+  
+  h1 {
+    
+    font-size: 36px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 20px;
+    color: #FFFFFF;
+    
+  }
+  
+  img {
+    display: block;
+    margin: auto;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .content {
+    background-color: #FF0000;
+    padding: 50px;
+  }
