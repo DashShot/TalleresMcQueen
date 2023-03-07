@@ -1,6 +1,17 @@
-{{>encabezado}}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Reparaciones</title>
 
-		<h2>REPARACIONES</h2>
+	<link rel="stylesheet" href="/css/valoracion.css">
+</head>
+
+<header>
+{{>encabezado}}
+</header>
+<body>
+	<h2>REPARACIONES</h2>
 	<form acction="/Reparaciones/nuevaReparacion" method="post">
 		<a>Selecciona usuario:</a>
 		<select name="usuarioID" >
@@ -13,48 +24,48 @@
 			<h2>Servicios</h2>
 			<p>Elige el tipo de reparación que necesitas:</p>
 			<ul>
-					<button onclick="muestraRep('Aceite',15)" data-="Aceite">
+					<button onclick="muestraRep('Cambio de Aceite',15)" data-="Aceite">
 						<img src="https://raw.githubusercontent.com/DashShot/TalleresMcQueen/main/src/main/resources/templates/reparaciones/imagenes/Cambio-de-aceite.jpg	" alt="Cambio de aceite" width="100" height="100">
-						<p>Cambio de aceite</p>
+						<p style="color:black">Cambio de aceite</p>
 					</button>
 					
 				
 				
-					<button onclick="muestraRep('Frenos',20)" data-="Frenos">
+					<button onclick="muestraRep('Reparación de Frenos',20)" data-="Frenos">
 						<img src="https://raw.githubusercontent.com/DashShot/TalleresMcQueen/main/src/main/resources/templates/reparaciones/imagenes/reparacion-frenos.jpg" alt="Reparación de frenos" width="100" height="100">
-						<p>Reparación de frenos</p>
+						<p style="color:black">Reparación de frenos</p>
 					</button>
 				
 				
-					<button onclick="muestraRep('Neumáticos',10)" data-="Neumáticos">
+					<button onclick="muestraRep('Cambio de Neumáticos',10)" data-="Neumáticos">
 						 <img src="https://raw.githubusercontent.com/DashShot/TalleresMcQueen/main/src/main/resources/templates/reparaciones/imagenes/reparacion-neumaticos.jpg" alt="Cambio de neumáticos" width="100" height="100"> 
-						<p>Cambio de neumáticos</p>
+						<p style="color:black">Cambio de neumáticos</p>
 					</button>
 				
-					<button onclick="muestraRep('Suspensión',20)" data-="Suspensión">
+					<button onclick="muestraRep('Reparación de Suspensión',20)" data-="Suspensión">
 						<img src="https://raw.githubusercontent.com/DashShot/TalleresMcQueen/main/src/main/resources/templates/reparaciones/imagenes/reparacion-suspension.jpg" alt="Reparación de la suspensión" width="100" height="100">
-						<p>Reparación de la suspensión</p>
+						<p style="color:black">Reparación de la suspensión</p>
 					</button>
 					
 				
-					<button onclick="muestraRep('Motor',50)" data-="Motor"> 
+					<button onclick="muestraRep('Reparación de Motor',50)" data-="Motor"> 
 						<img src="https://raw.githubusercontent.com/DashShot/TalleresMcQueen/main/src/main/resources/templates/reparaciones/imagenes/reparacion-motor.jpg" alt="Reparación de motor" width="100" height="100">
-						<p>Reparación de motor</p>
+						<p style="color:black">Reparación de motor</p>
 					</button>
 				
-					<button onclick="muestraRep('Transmisión',30)" data-="Transmisión">
+					<button onclick="muestraRep('Reparación de Transmisión',30)" data-="Transmisión">
 						<img src="https://raw.githubusercontent.com/DashShot/TalleresMcQueen/main/src/main/resources/templates/reparaciones/imagenes/reparacion-transmision.jpg" alt="Reparación de transmisión" width="100" height="100">
-						<p>Reparación de transmisión</p>
+						<p style="color:black">Reparación de transmisión</p>
 					</button>
-					<button onclick="muestraRep('Sistemas Electrónicos',20)" data-="Sistemas electrónicos">
+					<button onclick="muestraRep('Reparación de Sistemas Electrónicos',20)" data-="Sistemas electrónicos">
 						<img src="https://raw.githubusercontent.com/DashShot/TalleresMcQueen/main/src/main/resources/templates/reparaciones/imagenes/reparacion-electronica.jpg" alt="Reparación de sistemas electrónicos" width="100" height="100">
-						<p>Reparación de sistemas electrónicos</p>
+						<p style="color:black">Reparación de sistemas electrónicos</p>
 					</button>
 				</li>
 			</ul>
 
 			<h2>Reparaciones Selecionadas:</h2>
-			<textarea id="resultado" rows="10"></textarea>
+			<textarea id="resultado" ></textarea>
 
 	
 		<script>
@@ -79,6 +90,9 @@
 		<input type="hidden" name="resultado" id="resultado-input">
 		<input type="hidden" name="num" id="num-input">
 		 
-		<input type="submit" value="iniciar reparacion">
-	</form>	
+		
+	</form>		
+</body>
+<footer>
 {{>piedepagina}}
+</footer>

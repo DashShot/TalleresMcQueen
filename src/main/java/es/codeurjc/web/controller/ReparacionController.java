@@ -7,15 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-//import org.springframework.web.bind.annotation.ModelAttribute;
-//import org.springframework.web.bind.annotation.PathVariable;
-//import org.springframework.web.bind.annotation.PostMapping;
-//import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import es.codeurjc.web.models.Reparacion;
-import es.codeurjc.web.repository.UsuarioRepository;
 import es.codeurjc.web.service.ReparacionService;
 import es.codeurjc.web.service.UsuarioService;
 
@@ -54,10 +49,13 @@ public class ReparacionController {
     
     return "redirect:/Reparaciones";
   }
- /*  @GetMapping ("/Reparaciones/curso")//cambiar por {id}
-  public String verReparacion(){
+  /* 
+ 
+  @GetMapping ("/Reparaciones/{id}")//cambiar por {id}
+  public String verReparacion(Model model, @PathVariable long id){
     return "reparaciones/reparando";
   }
+  
   */
   /* 
   @GetMapping("/{id}")
