@@ -12,18 +12,19 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import es.codeurjc.daw.library.security.jwt.AuthResponse;
-import es.codeurjc.daw.library.security.jwt.LoginRequest;
-import es.codeurjc.daw.library.security.jwt.UserLoginService;
-import es.codeurjc.daw.library.security.jwt.AuthResponse.Status;
+
+import es.codeurjc.web.security.jwt.AuthResponse;
+import es.codeurjc.web.security.jwt.LoginRequest;
+import es.codeurjc.web.security.jwt.UserLoginService;
+import es.codeurjc.web.security.jwt.AuthResponse.Status;
 import es.codeurjc.web.repository.UsuarioRepository;
 
 @RestController
 @RequestMapping("/api/auth")
 public class LoginController {
-
+/* 
 	@Autowired
-	private UsuarioRepository userService;
+	private UserLoginService userService;
 
 	@PostMapping("/login")
 	public ResponseEntity<AuthResponse> login(
@@ -46,4 +47,5 @@ public class LoginController {
 
 		return ResponseEntity.ok(new AuthResponse(Status.SUCCESS, userService.logout(request, response)));
 	}
+	*/
 }
