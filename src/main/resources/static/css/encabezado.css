@@ -65,3 +65,14 @@ header form input[type=submit]:hover {
 header form input[type=submit]:active {
     background-color: red;
 }
+header form {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+header #usuario {
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: bold;
+  border: 2px solid white;
+}

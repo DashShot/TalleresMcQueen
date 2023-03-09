@@ -22,15 +22,15 @@ public class ReparacionController {
   @Autowired
   private UsuarioService usuarioService;
 
-  @GetMapping("/Reparaciones")
+  @GetMapping("/reparaciones")
   public String reparaciones(Model model){
       model.addAttribute("reparaciones", reparacionService.findAll());
       return "reparaciones/ver_reparaciones";
 
   }
 
-  @GetMapping("/Reparaciones/nuevaReparacion")
-  public String nuevaReparacion(Model model){
+  @GetMapping("/reparaciones/nuevareparacion")
+  public String nuevareparacion(Model model){
     model.addAttribute("usuario", usuarioService.findAll());
     return "reparaciones/nueva_reparacion";
   }
@@ -38,8 +38,8 @@ public class ReparacionController {
 
 
 
-  @PostMapping("/Reparaciones/nuevaReparacion")
-  public String Reparacion(@RequestParam Long usuarioID ,@RequestParam String resultado, @RequestParam Integer num){
+  @PostMapping("/reparaciones/nuevareparacion")
+  public String reparacion(@RequestParam Long usuarioID ,@RequestParam String resultado, @RequestParam Integer num){
     Reparacion reparacion = new Reparacion();
     reparacion.setUsuario(usuarioService.findbyID(usuarioID).get());
     reparacion.setTipo(resultado);
@@ -47,7 +47,7 @@ public class ReparacionController {
 
     reparacionService.save(reparacion);
     
-    return "redirect:/Reparaciones";
+    return "redirect:/reparaciones";
   }
   /* 
  

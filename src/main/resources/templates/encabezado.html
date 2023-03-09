@@ -14,17 +14,34 @@
         <input type="submit" value="Inicio" />
     </form>
 
-    <form action="/Contactos" method="get">
+    <form action="/contactos" method="get">
         <input type="submit" value="Acerca Nuestra" />
     </form>    
     
-    <form action="/Valoraciones" method="get">
+    <form action="/valoraciones" method="get">
         <input type="submit" value="Valoraciones de Nuestros Clientes" />
     </form>
     
-    <form action ="/Reparaciones" method="get">
+    <form action ="/reparaciones" method="get">
         <input type="submit" value ="Realizar una Reparacion"/>
     </form>
+    <form action="/iniciarSesion" method="get">
+        <input type="submit" value="Iniciar Sesión" />
+    </form>
+    
+    <form action="/cerrarSesion" method="get">
+        <input type="submit" value="Cerrar Sesión" />
+    </form>
+    
+    <form action="/registro" method="get">
+        <input type="submit" value="Registro" />
+    </form>
+    
+    <div id="usuario">
+        {{#usuario}}
+            Usuario: {{nombre}}
+        {{/usuario}}
+    </div>
     </header>
 </body>
     

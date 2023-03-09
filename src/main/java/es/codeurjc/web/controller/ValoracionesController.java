@@ -20,28 +20,26 @@ public class ValoracionesController {
     private UsuarioService usuarioService;
 
     //Todas las valoraciones
-    @GetMapping("/Valoraciones")
+    @GetMapping("/valoraciones")
     public String verValoraciones(Model model){
         model.addAttribute("valoraciones",valoracionesService.findAll());
         return "valoraciones/ver_valoraciones";
     }
 
      //Pagina de crear una Valoracion
-     @GetMapping("/Valoraciones/CrearValoracion")
+     @GetMapping("/valoraciones/crearvaloracion")
      public String crearValoracion(Model model){
 
         model.addAttribute("usuario", usuarioService.findAll());
          return "valoraciones/nueva_valoracion";
      }
 
-     @PostMapping("/Valoraciones/CrearValoracion/Exito")
-     public String  crearValoracion(@RequestParam Long usuarioID , Valoraciones valoraciones){
-        
+     @PostMapping("/valoraciones/crearvaloracion/exito")
+     public String  crearvaloracion(@RequestParam Long usuarioID , Valoraciones valoraciones){
         valoraciones.setUsuario(usuarioService.findbyID(usuarioID).get());
         valoracionesService.save(valoraciones);
         
-        return "redirect:/Valoraciones";
+        return "redirect:/valoraciones";
      }
     
-
 }

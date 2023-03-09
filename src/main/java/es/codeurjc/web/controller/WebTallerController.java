@@ -82,21 +82,21 @@ public class WebTallerController {
    //@Autowired
    // private UsuarioService userService;
 
-    @GetMapping("/verDatosUsuario")
+    @GetMapping("/verdatos_usuario")
     public String verDatos(Model model, HttpServletRequest request){
         
         Principal principal = request.getUserPrincipal();
         
         model.addAttribute("Nombre",principal.getName());
      
-        return "verDatosUsuario";
+        return "verdatos_usuario";
     }
 
-    @PostMapping("/editarDatos")
+    @PostMapping("/editardatos")
     public String editarDatos(Model model, HttpServletRequest req) {
         
         
-        return "cambiarDatosUsuario";
+        return "cambiardato_susuario";
     }
     
 }

@@ -20,21 +20,21 @@ public class ContactosController {
     @Autowired
     private MecanicoService mecanicoService;
 
-    @GetMapping("/Contactos")
+    @GetMapping("/contactos")
     public String mostrarContactos(Model model){
         model.addAttribute("talleres",contactosService.findAll());
         model.addAttribute("mecanicos", mecanicoService.findAll());
         return "contactos/vercontactos";
     }
 
-    @GetMapping("/Contactos/{id}")
+    @GetMapping("/contactos/{id}")
     public String mostrarContacto(Model model, @PathVariable long id){
         Optional<Contactos> Contacto = contactosService.findbyID(id);
         if (Contacto.isPresent()){
             model.addAttribute("Contacto", Contacto.get());
-            return "Contacto";
+            return "contacto";
         }
-        return "Contactos";
+        return "contactos";
     }
 
 }
