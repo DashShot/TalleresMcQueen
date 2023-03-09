@@ -36,13 +36,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 
     	//Autorizar css y las imagenes
-    	http.authorizeRequests().antMatchers("/css/**", "/imgenes/**").permitAll();
+    	http.authorizeRequests().antMatchers("/css/**", "/imagenes/**").permitAll();
 
         // Public pages
         http.authorizeRequests().antMatchers("/").permitAll();
         http.authorizeRequests().antMatchers("/").permitAll();
-        http.authorizeRequests().antMatchers("/login").permitAll();
-        http.authorizeRequests().antMatchers("/loginerror").permitAll();
+        http.authorizeRequests().antMatchers("/iniciarsesion").permitAll();
+        http.authorizeRequests().antMatchers("/iniciosesionerror").permitAll();
 
 
         // Private pages (all other pages)
@@ -52,11 +52,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.formLogin().loginPage("/login");
         http.formLogin().usernameParameter("");
         http.formLogin().passwordParameter("");
-        http.formLogin().defaultSuccessUrl("/");
+        http.formLogin().defaultSuccessUrl("/inicio");
         http.formLogin().failureUrl("/loginerror");
 
         // Logout
-        http.logout().logoutUrl("/logout");
+        http.logout().logoutUrl("/cerrarsesion");
         http.logout().logoutSuccessUrl("/inicio");
 
     }

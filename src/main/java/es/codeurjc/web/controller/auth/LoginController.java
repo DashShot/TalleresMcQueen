@@ -16,13 +16,14 @@ import es.codeurjc.daw.library.security.jwt.AuthResponse;
 import es.codeurjc.daw.library.security.jwt.LoginRequest;
 import es.codeurjc.daw.library.security.jwt.UserLoginService;
 import es.codeurjc.daw.library.security.jwt.AuthResponse.Status;
+import es.codeurjc.web.repository.UsuarioRepository;
 
 @RestController
 @RequestMapping("/api/auth")
 public class LoginController {
 
 	@Autowired
-	private UserLoginService userService;
+	private UsuarioRepository userService;
 
 	@PostMapping("/login")
 	public ResponseEntity<AuthResponse> login(

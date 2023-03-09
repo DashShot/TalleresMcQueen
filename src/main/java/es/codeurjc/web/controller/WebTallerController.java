@@ -18,86 +18,84 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import es.codeurjc.web.service.UsuarioService;
 
-
 @Controller
 public class WebTallerController {
-
+    /* 
     @Autowired
     private UsuarioRepository usuarioRepository;
- 
+
     @ModelAttribute
-	public void addAttributes(Model model, HttpServletRequest request) {
-        
+    public void addAttributes(Model model, HttpServletRequest request) {
 
-		Principal principal = request.getUserPrincipal();  
+        Principal principal = request.getUserPrincipal();
 
-		if (principal != null) {
+        if (principal != null) {
 
-			model.addAttribute("sesionIniciada", true);
-			model.addAttribute("userName", principal.getName());
-			model.addAttribute("admin", request.isUserInRole("ADMIN"));
+            model.addAttribute("sesionIniciada", true);
+            model.addAttribute("userName", principal.getName());
+            model.addAttribute("admin", request.isUserInRole("ADMIN"));
 
-		} else {
-			model.addAttribute("sesionIniciada", false);
+        } else {
+            model.addAttribute("sesionIniciada", false);
         }
-    
-	}
-    
-    //--------------- Pantalla inicial ----------------------------------// 
-    
-    @GetMapping("/")
-    public String inicio(){
 
-        //model.addAttribute("Imgen",false);
-        
+    }
+*/
+    // --------------- Pantalla inicial ----------------------------------//
+
+    @GetMapping("/")
+    public String inicio() {
+
+        // model.addAttribute("Imgen",false);
+
         return "inicio";
     }
-    
-    //------------------------ Login ----------------------------------------//
-     
+
+    // ------------------------ Login ----------------------------------------//
+
     @RequestMapping("/login")
-    public String login(){
+    public String login() {
         return "iniciosesion";
     }
 
     @PostMapping("/login-ok")
 
-
     @GetMapping("/loginerror")
-    public String loginerror(){
+    public String loginerror() {
         return "iniciosesionerror";
     }
-    
-    //------------------ Registro ------------------------------------------------//
-    
+
+    // ------------------ Registro
+    // ------------------------------------------------//
+
     @GetMapping("/registro")
-    public String registro(){
+    public String registro() {
         return "registrosesion";
     }
 
-    @PostMapping ("/registro-ok")
-    public String registroOk(){
+    @PostMapping("/registro-ok")
+    public String registroOk() {
 
         return "redirect:inicio";
     }
 
-   //---------------------- Usuario -----------------------------------------------//
+    // ---------------------- Usuario
+    // -----------------------------------------------//
 
     @GetMapping("/verdatos_usuario")
-    public String verDatos(Model model, HttpServletRequest request){
-        
+    public String verDatos(Model model, HttpServletRequest request) {
+
         Principal principal = request.getUserPrincipal();
-        
-        model.addAttribute("Nombre",principal.getName());
-     
+
+        model.addAttribute("Nombre", principal.getName());
+
         return "verdatos_usuario";
     }
 
     @PostMapping("/editardatos")
     public String editarDatos(Model model, HttpServletRequest req) {
-        
-        
+
         return "cambiardato_susuario";
     }
-    
+
 }
