@@ -57,7 +57,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
         // Logout
         http.logout().logoutUrl("/logout");
-        http.logout().logoutSuccessUrl("/MassiveGamingC");
+        http.logout().logoutSuccessUrl("/inicio");
 
     }
 
