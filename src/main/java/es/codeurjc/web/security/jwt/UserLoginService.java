@@ -1,18 +1,24 @@
 package es.codeurjc.web.security.jwt;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
-
-//import es.codeurjc.web.model.Usuario;
-import es.codeurjc.web.repository.UsuarioRepository;
 
 @Service
 public class UserLoginService {
- /* 
+  
     @Autowired
 	private AuthenticationManager authenticationManager;
 	
@@ -132,5 +138,5 @@ public class UserLoginService {
 		httpHeaders.add(HttpHeaders.SET_COOKIE,
 				cookieUtil.createRefreshTokenCookie(token.getTokenValue(), token.getDuration()).toString());
 	}
-    */
+    
 }

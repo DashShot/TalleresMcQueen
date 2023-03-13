@@ -17,12 +17,11 @@ import es.codeurjc.web.security.jwt.AuthResponse;
 import es.codeurjc.web.security.jwt.LoginRequest;
 import es.codeurjc.web.security.jwt.UserLoginService;
 import es.codeurjc.web.security.jwt.AuthResponse.Status;
-import es.codeurjc.web.repository.UsuarioRepository;
 
 @RestController
 @RequestMapping("/api/auth")
 public class LoginController {
-/* 
+
 	@Autowired
 	private UserLoginService userService;
 
@@ -47,5 +46,5 @@ public class LoginController {
 
 		return ResponseEntity.ok(new AuthResponse(Status.SUCCESS, userService.logout(request, response)));
 	}
-	*/
+	
 }
