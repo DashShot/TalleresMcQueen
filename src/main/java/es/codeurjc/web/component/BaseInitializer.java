@@ -112,10 +112,11 @@ public class BaseInitializer implements CommandLineRunner {
         contactosService.save(new Contactos("Calle 8 - Ciudad 1", "contacto8@example.com", 823456789));
 
      }
+    
 }
 
 
-
+ 
 
 
 

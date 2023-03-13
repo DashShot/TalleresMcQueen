@@ -58,7 +58,7 @@ public class WebTallerController {
         return "iniciosesion";
     }
 
-    @PostMapping("/login-ok")
+    //@PostMapping("/login-ok")
 
     @GetMapping("/loginerror")
     public String loginerror() {

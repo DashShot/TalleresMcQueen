@@ -13,6 +13,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table
 public class Usuario {
@@ -24,6 +26,7 @@ public class Usuario {
     @Column(name = "Nombre")
     private String nombre;
 
+    @JsonIgnore
     private String contrasena;
 
     @ElementCollection(fetch = FetchType.EAGER)
@@ -43,6 +46,8 @@ public class Usuario {
         this.contrasena = contrasena;
         this.roles = List.of(roles);
     }
+
+
     public long getId(){return id;}
     public void setId(long id){this.id = id;}
     public String getNombre(){return nombre;}
