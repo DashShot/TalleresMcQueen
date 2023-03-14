@@ -14,13 +14,15 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import es.codeurjc.web.repository.UsuarioRepository;
+
 //import es.codeurjc.web.repository.UsuarioRepository;
 
 import es.codeurjc.web.service.UsuarioService;
 
 @Controller
 public class WebTallerController {
-    /* 
+    
     @Autowired
     private UsuarioRepository usuarioRepository;
 
@@ -40,7 +42,7 @@ public class WebTallerController {
         }
 
     }
-*/
+
     // --------------- Pantalla inicial ----------------------------------//
 
     @GetMapping("/")
@@ -55,12 +57,11 @@ public class WebTallerController {
 
     @RequestMapping("/login")
     public String login() {
-        return "iniciosesion";
+        return "iniciarsesion";
     }
 
-    //@PostMapping("/login-ok")
 
-    @GetMapping("/loginerror")
+    @RequestMapping("/loginerror")
     public String loginerror() {
         return "iniciosesionerror";
     }
