@@ -1,11 +1,15 @@
 package es.codeurjc.web.controller;
 
+import java.security.Principal;
 import java.util.Optional;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import es.codeurjc.web.models.Contactos;
@@ -19,6 +23,24 @@ public class ContactosController {
     private ContactosService contactosService;
     @Autowired
     private MecanicoService mecanicoService;
+
+    
+    @ModelAttribute
+    public void addAttributes(Model model, HttpServletRequest request) {
+
+        Principal principal = request.getUserPrincipal();
+
+        if (principal != null) {
+
+            model.addAttribute("sesionIniciada", true);
+            model.addAttribute("userName", principal.getName());
+            model.addAttribute("admin", request.isUserInRole("ADMIN"));
+
+        } else {
+            model.addAttribute("sesionIniciada", false);
+            model.addAttribute("userName", "Invitado");
+        }
+    }
 
     @GetMapping("/contactos")
     public String mostrarContactos(Model model){

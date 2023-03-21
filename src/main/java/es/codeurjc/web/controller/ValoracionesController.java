@@ -1,10 +1,15 @@
 package es.codeurjc.web.controller;
 
 
+import java.security.Principal;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -18,6 +23,23 @@ public class ValoracionesController {
     private ValoracionesService valoracionesService;
     @Autowired
     private UsuarioService usuarioService;
+    
+    @ModelAttribute
+    public void addAttributes(Model model, HttpServletRequest request) {
+
+        Principal principal = request.getUserPrincipal();
+
+        if (principal != null) {
+
+            model.addAttribute("sesionIniciada", true);
+            model.addAttribute("userName", principal.getName());
+            model.addAttribute("admin", request.isUserInRole("ADMIN"));
+
+        } else {
+            model.addAttribute("sesionIniciada", false);
+            model.addAttribute("userName", "Invitado");
+        }
+    }
 
     //Todas las valoraciones
     @GetMapping("/valoraciones")
