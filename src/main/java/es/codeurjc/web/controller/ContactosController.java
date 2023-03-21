@@ -27,6 +27,7 @@ public class ContactosController {
         return "contactos/vercontactos";
     }
 
+    
     @GetMapping("/contactos/{id}")
     public String mostrarContacto(Model model, @PathVariable long id){
         Optional<Contactos> Contacto = contactosService.findbyID(id);
@@ -35,6 +36,8 @@ public class ContactosController {
             return "contacto";
         }
         return "contactos";
+        
     }
+    
 
 }

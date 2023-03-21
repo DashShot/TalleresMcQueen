@@ -39,6 +39,7 @@ public class WebTallerController {
 
         } else {
             model.addAttribute("sesionIniciada", false);
+            model.addAttribute("userName", "Invitado");
         }
 
     }
@@ -55,10 +56,12 @@ public class WebTallerController {
 
     // ------------------------ Login ----------------------------------------//
 
+    /* 
     @GetMapping("/login")
     public String verLogin(){
         return "login";
     }
+    */
     
     @RequestMapping("/login")
     public String login() {

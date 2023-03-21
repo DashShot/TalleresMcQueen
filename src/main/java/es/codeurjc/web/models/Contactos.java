@@ -52,7 +52,7 @@ public class Contactos {
     
     @Override
     public String toString(){
-        return this.toString() + "Email del taller: "+ email + "/ Telefono del taller: "+ telefono;
+        return ("Email del taller: "+ email + "/ Telefono del taller: "+ telefono);
     }
 
 }
