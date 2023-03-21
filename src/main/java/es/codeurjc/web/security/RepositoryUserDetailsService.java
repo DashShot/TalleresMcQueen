@@ -15,25 +15,23 @@ import es.codeurjc.web.models.Usuario;
 import es.codeurjc.web.repository.UsuarioRepository;
 
 
-
 @Service
 public class RepositoryUserDetailsService implements UserDetailsService {
- 
- @Autowired
- private UsuarioRepository userRepository;
- 
- 
-@Override
-public UserDetails loadUserByUsername(String nombreusuario) throws UsernameNotFoundException{
-		
-	Usuario u = (Usuario) userRepository.findByUsuario(nombreusuario);
-	if( u == null)throw new UsernameNotFoundException("Usuario no encontrado");
-	
-	List<GrantedAuthority> roles = new ArrayList<>();
-	for(String rol : u.getRoles()) {
-		roles.add(new SimpleGrantedAuthority("ROLE_"+rol));
+
+	@Autowired
+	private UsuarioRepository userRepository;
+
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+
+		Usuario user = userRepository.findByNombre(username).orElseThrow(() -> new UsernameNotFoundException("User not found"));
+
+		List<GrantedAuthority> roles = new ArrayList<>();
+		for (String role : user.getRoles()) {
+			roles.add(new SimpleGrantedAuthority("ROLE_" + role));
+		}
+
+		return new org.springframework.security.core.userdetails.User(user.getNombre(),user.getContrasena(), roles);
+
 	}
-	
-	return new org.springframework.security.core.userdetails.User(u.getNombre(), u.getContrasena(), roles);
-}
 }
