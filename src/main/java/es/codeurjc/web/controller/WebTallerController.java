@@ -55,15 +55,20 @@ public class WebTallerController {
 
     // ------------------------ Login ----------------------------------------//
 
+    @GetMapping("/login")
+    public String verLogin(){
+        return "login";
+    }
+    
     @RequestMapping("/login")
     public String login() {
-        return "iniciarsesion";
+        return "login";
     }
 
 
     @RequestMapping("/loginerror")
     public String loginerror() {
-        return "iniciosesionerror";
+        return "loginerror";
     }
 
     // ------------------ Registro
