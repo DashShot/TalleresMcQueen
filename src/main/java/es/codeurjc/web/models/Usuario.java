@@ -56,6 +56,10 @@ public class Usuario {
     public void setContrasena(String contrasena){this.contrasena = contrasena;}
     public List<String> getRoles(){ return this.roles;}
     public void setRoles(List<String> roles){this.roles = roles;}
+    
+    public void addRol(String rol) {
+		this.roles.add(rol);
+	}
 
     //Listas de valoraciones
     public List<Valoraciones> getValoraciones(){return listaValoraciones;}

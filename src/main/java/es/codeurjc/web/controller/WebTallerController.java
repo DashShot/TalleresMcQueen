@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import es.codeurjc.web.models.Usuario;
 import es.codeurjc.web.repository.UsuarioRepository;
@@ -81,18 +82,20 @@ public class WebTallerController {
 
     @GetMapping("/registro")
     public String registro() {
-        return "registrosesion";
+        return "registro";
     }
-    /* 
-    @PostMapping("/registro-ok")
-	public String registrado(Model model, Usuario usuario) {
-		if (usuarioRepository.getByNombre(usuario.getNombre()) != null) return "userexists";
-		usuario.setContrasenya(passwordEncoder.encode(usuario.getContrasenya()));
-		usuario.addRol("USER");
-		usuarioRepository.save(usuario);
-		return "registro_completado";
+
+    
+    @PostMapping("/registro")
+	public String registrar(@RequestParam String nombre, @RequestParam String contrasena) {
+
+		if (usuarioRepository.getByNombre(nombre) != null) return "registroerror";
+        Usuario u = new Usuario(nombre,passwordEncoder.encode(contrasena),("USER"));
+		usuarioRepository.save(u);
+        
+		return "registroexito";
 	}
-    */
+    
     
     // ---------------------- Usuario
     // -----------------------------------------------//

@@ -1,0 +1,13 @@
+{{>encabezado}}
+       
+        <h1>Registrese a continuación:</h1>
+        <form action="/registro" method="post">
+
+        <p>Nombre: <textarea name='nombre' rows='1' cols='50' style="resize:none"></textarea></p>       
+        <p>Contraseña: <textarea name='contrasena' rows='1' cols='50' style="resize:none"></textarea></p>
+
+        <input type="hidden" name="_csrf" value="{{token}}"/>
+        <input type='submit' value='Registrar'>
+        </form>
+
+{{>piedepagina}}
