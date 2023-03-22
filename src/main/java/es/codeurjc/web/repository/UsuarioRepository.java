@@ -11,7 +11,7 @@ import es.codeurjc.web.models.Usuario;
 public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
    // @Query("select u from Usuario u where UPPER(u.nombre) LIKE UPPER(CONCAT ('%',?1,'%'))")
     
-   Optional<Usuario> findByNombre(String nombre);
+  // Optional<Usuario> findByNombre(String nombre);
     
-   // Usuario getByNombre(String nombre);
+   Usuario getByNombre(String nombre);
 }

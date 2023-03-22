@@ -1,4 +1,7 @@
 {{>encabezado}}
 	<p>Cerrar sesión</p>
-	<a href="/">Cerrar Sesión</a>
+	<form action="/logout" method="post">
+		<li class="nav-item"><button class="nav-link fs-5">Cerrar Sesión</button></li>
+		<input type="hidden" name="_csrf" value="{{token}}" />
+	</form>
 {{>piedepagina}}

@@ -13,13 +13,8 @@
 <body>
 	<h2>REPARACIONES</h2>
 	<form acction="/Reparaciones/nuevaReparacion" method="post">
-		<a>Selecciona usuario:</a>
-		<select name="usuarioID" >
-			{{#usuario}}
-			<option value ="{{id}}">{{nombre}} </option>
-			{{/usuario}}
-		</select>
 		
+	
 	
 			<h2>Servicios</h2>
 			<p>Elige el tipo de reparación que necesitas:</p>
@@ -86,10 +81,11 @@
 				}
 		</script>
 
-				
+	
+		
 		<input type="hidden" name="resultado" id="resultado-input">
 		<input type="hidden" name="num" id="num-input">
-		 
+		<input type="hidden" name="_csrf" value="{{token}}"/>
 		
 	</form>		
 </body>

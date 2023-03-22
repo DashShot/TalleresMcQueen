@@ -3,6 +3,7 @@ package es.codeurjc.web.controller;
 
 
 import java.security.Principal;
+import java.util.Optional;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -16,6 +17,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import es.codeurjc.web.models.Reparacion;
+import es.codeurjc.web.models.Usuario;
+import es.codeurjc.web.repository.ReparacionesRepository;
+import es.codeurjc.web.repository.UsuarioRepository;
 import es.codeurjc.web.service.ReparacionService;
 import es.codeurjc.web.service.UsuarioService;
 
@@ -25,8 +29,12 @@ public class ReparacionController {
   @Autowired
   private ReparacionService reparacionService;
   @Autowired
-  private UsuarioService usuarioService;
+  private ReparacionesRepository reparacionesRepository;
 
+  @Autowired
+  private UsuarioService usuarioService;
+  @Autowired
+  private UsuarioRepository usuarioRepository;
   
   @ModelAttribute
   public void addAttributes(Model model, HttpServletRequest request) {
@@ -62,13 +70,18 @@ public class ReparacionController {
 
 
   @PostMapping("/reparaciones/nuevareparacion")
-  public String reparacion(@RequestParam Long usuarioID ,@RequestParam String resultado, @RequestParam Integer num){
-    Reparacion reparacion = new Reparacion();
-    reparacion.setUsuario(usuarioService.findbyID(usuarioID).get());
-    reparacion.setTipo(resultado);
-    reparacion.setTiempo(num);
+  public String reparacion(@RequestParam Integer num, @RequestParam String resultado, HttpServletRequest req){
+  
+      Reparacion reparacion = new Reparacion(num, resultado);
+      String nombre =req.getUserPrincipal().getName();
+      Usuario u = usuarioRepository.getByNombre(nombre);
 
-    reparacionService.save(reparacion);
+      usuarioRepository.getByNombre(nombre).addReparaciones(reparacion);
+      reparacion.setUsuario(u);
+      
+      reparacionesRepository.save(reparacion);
+
+    
     
     return "redirect:/reparaciones";
   }
@@ -78,7 +91,11 @@ public class ReparacionController {
   public String verReparacion(Model model, @PathVariable long id){
     return "reparaciones/reparando";
   }
-  
+  <script>
+			var nombre = ("{{}}")
+		</script>
+		<input type="hidden" name="nombre" id="nombre"> 
+		<input type="hidden" name="_csrf" value="{{token}}"/>
   */
   /* 
   @GetMapping("/{id}")
