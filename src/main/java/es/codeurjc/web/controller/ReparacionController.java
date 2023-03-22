@@ -3,7 +3,6 @@ package es.codeurjc.web.controller;
 
 
 import java.security.Principal;
-import java.util.Optional;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -21,7 +20,7 @@ import es.codeurjc.web.models.Usuario;
 import es.codeurjc.web.repository.ReparacionesRepository;
 import es.codeurjc.web.repository.UsuarioRepository;
 import es.codeurjc.web.service.ReparacionService;
-import es.codeurjc.web.service.UsuarioService;
+
 
 @Controller
 public class ReparacionController {
@@ -31,8 +30,6 @@ public class ReparacionController {
   @Autowired
   private ReparacionesRepository reparacionesRepository;
 
-  @Autowired
-  private UsuarioService usuarioService;
   @Autowired
   private UsuarioRepository usuarioRepository;
   
@@ -53,20 +50,19 @@ public class ReparacionController {
       }
   }
 
+//--------------------- Reparaciones Realizadas ---------------------------//
   @GetMapping("/reparaciones")
   public String reparaciones(Model model){
       model.addAttribute("reparaciones", reparacionService.findAll());
       return "reparaciones/ver_reparaciones";
 
   }
+// ------------------------- Realizar una Nueva Reparación --------------------//
 
   @GetMapping("/reparaciones/nuevareparacion")
-  public String nuevareparacion(Model model){
-    model.addAttribute("usuario", usuarioService.findAll());
+  public String nuevareparacion(){
     return "reparaciones/nueva_reparacion";
   }
-
-
 
 
   @PostMapping("/reparaciones/nuevareparacion")
@@ -78,10 +74,9 @@ public class ReparacionController {
 
       usuarioRepository.getByNombre(nombre).addReparaciones(reparacion);
       reparacion.setUsuario(u);
-      
+
       reparacionesRepository.save(reparacion);
 
-    
     
     return "redirect:/reparaciones";
   }
@@ -91,11 +86,7 @@ public class ReparacionController {
   public String verReparacion(Model model, @PathVariable long id){
     return "reparaciones/reparando";
   }
-  <script>
-			var nombre = ("{{}}")
-		</script>
-		<input type="hidden" name="nombre" id="nombre"> 
-		<input type="hidden" name="_csrf" value="{{token}}"/>
+
   */
   /* 
   @GetMapping("/{id}")

@@ -21,7 +21,9 @@ public class UsuarioService {
     public List<Usuario> findAll(){
         return userRepository.findAll();
     } 
-
+    public Usuario getByNombre(String nombre){
+        return userRepository.getByNombre(nombre);
+    }
     public boolean exist(long id) {
 		return userRepository.existsById(id);
 	}

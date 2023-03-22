@@ -11,8 +11,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
+import es.codeurjc.web.models.Usuario;
 import es.codeurjc.web.models.Valoraciones;
 import es.codeurjc.web.service.UsuarioService;
 import es.codeurjc.web.service.ValoracionesService;
@@ -41,24 +41,28 @@ public class ValoracionesController {
         }
     }
 
-    //Todas las valoraciones
+//------------------- Ver Valoraciones -----------------------------//
     @GetMapping("/valoraciones")
     public String verValoraciones(Model model){
         model.addAttribute("valoraciones",valoracionesService.findAll());
         return "valoraciones/ver_valoraciones";
     }
 
-     //Pagina de crear una Valoracion
+// ---------------- Crear una Valoracion -----------------------------//
      @GetMapping("/valoraciones/crearvaloracion")
      public String crearValoracion(Model model){
 
-        model.addAttribute("usuario", usuarioService.findAll());
          return "valoraciones/nueva_valoracion";
      }
 
      @PostMapping("/valoraciones/crearvaloracion/exito")
-     public String  crearvaloracion(@RequestParam Long usuarioID , Valoraciones valoraciones){
-        valoraciones.setUsuario(usuarioService.findbyID(usuarioID).get());
+     public String  crearvaloracion( Valoraciones valoraciones,HttpServletRequest req){
+        
+        String nombre =req.getUserPrincipal().getName();
+        Usuario u = usuarioService.getByNombre(nombre);
+        u.addValoraciones(valoraciones);
+
+        valoraciones.setUsuario(u);
         valoracionesService.save(valoraciones);
         
         return "redirect:/valoraciones";

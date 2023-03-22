@@ -14,14 +14,7 @@
     
     
     <form action="/valoraciones/crearvaloracion/exito" method="post">
-        <div class="select-box">
-            <label for="usuarioID">Selecciona usuario:</label>
-            <select name="usuarioID" id="usuarioID">
-                {{#usuario}}
-                <option value="{{id}}">{{nombre}}</option>
-                {{/usuario}}
-            </select>
-        </div>
+       
         <div class="select-box">
             <label for="puntuacion">Puntuación:</label>
             <select name="puntuacion" id="puntuacion">
@@ -43,9 +36,12 @@
             <textarea name="texto" id="texto" rows="10" cols="50" style="resize:none"></textarea>
         </div>
         <div class="button-box">
+            <input type="hidden" name="_csrf" value="{{token}}"/>
             <input type="submit" value="Enviar">
         </div>
     </form>
+    
+	
     </body>
     <footer>
         {{>piedepagina}}
