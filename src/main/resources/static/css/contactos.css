@@ -46,7 +46,7 @@ a1 {
   }
   body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, black,red,black); /* Aplica un degradado de arriba hacia abajo desde el rojo hasta el negro */
+    background: linear-gradient(to bottom,red, rgb(78, 18, 18)); /* Aplica un degradado de arriba hacia abajo desde el rojo hasta el negro */
     margin: 0;
     padding: 0;
     position: relative; /* Permitir que la posición de la imagen se calcule en relación a este elemento */
