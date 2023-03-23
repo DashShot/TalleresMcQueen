@@ -8,6 +8,9 @@ DESCRIPCIÓN:
 
 La Aplicación TalleresMcQueen es un prototipo de aplicación para gestión y seguimiento de reparaciones de automóviles
 
+--------------Cambiar TODO-----------------------
+
+
 FUNCIONALIDADES:
  - PÚBLICAS: Poder acceder a los datos de contacto del taller (Dirección , números de teléfonos, mecánicos) así como poder ver reseñas asociadas a reparaciones terminadas para las cuales el usuario final dio su permiso
  - PRIVADAS: Seguimiento de la reparación de tu vehículo, dentro de la cuál se incluyen funcionalidades como ver el porcentaje restante de la reparación, imágenes de los avances en el vehículo, el estado de las piezas pedidas si fueran necesarias, ver si hay mecánicos trabajando actualmente en tu vehículo, valorar el resultado final, etc...
@@ -66,3 +69,4 @@ MODELO DE DATOS:
  --->DIAGRAMA ENTIDAD RELACION
  ![Modelo](https://user-images.githubusercontent.com/123817881/221811846-f557af82-69d2-4278-9ab9-7c29493e3325.png)
 
+mqv= talleresmcqueen pas=123
