@@ -21,8 +21,9 @@ h1 {
   }
   
   footer {
-    background-color: #333;
+    background: linear-gradient(to bottom, black,red, #333,red ,black);
     color: #fff;
     padding: 10px;
     text-align: center;
   }
+  

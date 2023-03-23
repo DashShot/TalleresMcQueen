@@ -50,3 +50,7 @@ body {
     background-color: #FF0000;
     padding: 50px;
   }
+  form {
+    display: inline-block;
+    margin: 1em;
+  }

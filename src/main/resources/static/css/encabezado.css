@@ -20,6 +20,12 @@ header {
     
   }
   
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+  text-align: center;
+}
   img {
     display: block;
     margin: auto;
@@ -29,8 +35,9 @@ header {
     padding: 50px;
   }
   form {
-    display: flex;
     justify-content: center;
+    display: inline-block;
+    margin: 1em;
 }
 input[type=submit] {
     color: white;
@@ -68,6 +75,7 @@ header form input[type=submit]:active {
 header form {
   display: inline-block;
   margin-right: 10px;
+
 }
 
 header #usuario {

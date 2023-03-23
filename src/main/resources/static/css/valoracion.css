@@ -20,13 +20,13 @@
 }
 
 .items li:nth-child(odd) {
-    background-color: #1c1c1c;
+    background-color: #581b1b;
 }
 
 .items li:nth-child(even) {
     background-color: #3a3a3a;
 }
-l1 {
+li {
     color: white;
     font-family: Arial, sans-serif;
   }
@@ -72,12 +72,13 @@ select:focus {
 }
 
 form input[type="submit"] {
-  background-color: white; /* cambia el color de fondo del botón a blanco */
-  color: black; /* cambia el color del texto del botón a negro */
-  border: none; /* elimina el borde del botón */
-  padding: 10px 20px; /* agrega un poco de espacio alrededor del texto del botón */
-  display: block; /* hace que el botón se muestre como un bloque para poder centrarlo */
-  margin: 0 auto; /* centra el botón horizontalmente */
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 1em 2em;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 .items li span {
     font-family: Arial, sans-serif;
@@ -103,6 +104,7 @@ form input[type="submit"] {
     color: #1e0404;
     font-size: 18px;
     margin-bottom: 10px;
+    
   }
 
   /*Nueva valoracion*/
@@ -119,6 +121,8 @@ form input[type="submit"] {
     font-weight: bold;
     margin-left: 40px;
     margin-right: 20px;
+    margin: 0 auto;
+
   }
   
   .select-box select {
@@ -132,6 +136,8 @@ form input[type="submit"] {
     color: black;
     margin-left: 40px;
     margin-right: 20px;
+    margin: 0 auto;
+
   }
   
   .textarea-box label {
@@ -142,20 +148,21 @@ form input[type="submit"] {
     margin: 20px;
     margin-left: 40px;
     margin-right: 20px;
+    
   }
   
   .textarea-box textarea {
     display: block;
-    width: 100%;
+    width: 80%;
     padding: 5px;
     font-size: 16px;
     border: 2px solid black;
     border-radius: 5px;
     background-color: rgb(240, 134, 134);
     color: black;
-    margin-left: 40px;
-
-    
+    margin-left: 100px;
+    margin-right: 100px;
+    margin: 0 auto;
   }
   
   .button-box {
@@ -172,4 +179,13 @@ form input[type="submit"] {
     color: black;
     
   }
+  form input:hover {
+    background-color: #666;
+  }
+
+
+
+
+
+
 

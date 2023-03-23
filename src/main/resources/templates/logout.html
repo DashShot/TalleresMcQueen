@@ -3,19 +3,24 @@
   <head>
     <meta charset="UTF-8">
     <title>Talleres McQueen</title>
-    <link rel="stylesheet" href="/css/inicio.css" />
+    <link rel="stylesheet" href="/css/logout.css" />
   </head>
   <body>
     <header>
         {{>encabezado}}
     </header>
-	<p>Cerrar sesión</p>
+	<h2>¿Quieres cerrar sesión?</h2>
 	<form action="/logout" method="post">
-		<li class="nav-item"><button class="nav-link fs-5">Cerrar Sesión</button></li>
+        <li class="nav-item"><button class="nav-link fs-5" type="submit">SI</button></li>
 		<input type="hidden" name="_csrf" value="{{token}}" />
 	</form>
-	<footer>
-        {{>piedepagina}}
-    </footer>
+	<form action="/" method="get">
+        <li class="nav-item"><button class="nav-link fs-5" type="submit">NO</button></li>
+    </form>
+	<br>
+	
   </body>
+  	<footer>
+	{{>piedepagina}}
+	</footer>	
 </html>
