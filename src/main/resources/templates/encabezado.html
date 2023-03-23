@@ -13,19 +13,21 @@
     <form action="/">
         <input type="submit" value="Inicio" />
     </form>
-
+    {{^admin}}
     <form action="/contactos" method="get">
         <input type="submit" value="Acerca Nuestra" />
-    </form>    
-    
+    </form>
+    {{/admin}}    
+    {{^admin}}
     <form action="/valoraciones" method="get">
         <input type="submit" value="Valoraciones de Nuestros Clientes" />
     </form>
-    
+    {{/admin}}
+    {{^admin}}
     <form action ="/reparaciones" method="get">
         <input type="submit" value ="Realizar una Reparacion"/>
     </form>
-
+    {{/admin}}
     {{^sesionIniciada}}
     <form action="/login" method="get">
         <input type="submit" value="Iniciar Sesión" />
@@ -46,7 +48,7 @@
     
     {{#admin}}
     <form action="/menuadmin" method="get">
-        <input type="submit" value ="Medu de Aministrador"/>
+        <input type="submit" value ="Menu de Aministrador"/>
     </form>
     {{/admin}}
 
