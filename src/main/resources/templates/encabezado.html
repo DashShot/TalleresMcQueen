@@ -25,18 +25,31 @@
     <form action ="/reparaciones" method="get">
         <input type="submit" value ="Realizar una Reparacion"/>
     </form>
+
+    {{^sesionIniciada}}
     <form action="/login" method="get">
         <input type="submit" value="Iniciar Sesión" />
     </form>
+    {{/sesionIniciada}}
     
+    {{#sesionIniciada}}
     <form action="/logout" method="get">
         <input type="submit" value="Cerrar Sesión" />
     </form>
-    
+    {{/sesionIniciada}}
+
+    {{^sesionIniciada}}
     <form action="/registro" method="get">
         <input type="submit" value="Registro" />
     </form>
+    {{/sesionIniciada}}
     
+    {{#admin}}
+    <form action="/menuadmin" method="get">
+        <input type="submit" value ="Medu de Aministrador"/>
+    </form>
+    {{/admin}}
+
     <div id="usuario">
         {{userName}}
     </div>

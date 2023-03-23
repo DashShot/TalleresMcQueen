@@ -17,11 +17,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import es.codeurjc.web.models.Usuario;
+import es.codeurjc.web.repository.ReparacionesRepository;
 import es.codeurjc.web.repository.UsuarioRepository;
 
 //import es.codeurjc.web.repository.UsuarioRepository;
 
-import es.codeurjc.web.service.UsuarioService;
+//import es.codeurjc.web.service.UsuarioService;
 
 @Controller
 public class WebTallerController {
@@ -30,7 +31,12 @@ public class WebTallerController {
     private UsuarioRepository usuarioRepository;
 
     @Autowired
+    private ReparacionesRepository reparacionesRepository;
+
+    @Autowired
     private PasswordEncoder passwordEncoder;
+    
+
 
     @ModelAttribute
     public void addAttributes(Model model, HttpServletRequest request) {
@@ -46,6 +52,7 @@ public class WebTallerController {
         } else {
             model.addAttribute("sesionIniciada", false);
             model.addAttribute("userName", "Invitado");
+            model.addAttribute("admin", request.isUserInRole("ADMIN"));
         }
 
     }
@@ -96,24 +103,20 @@ public class WebTallerController {
 		return "registroexito";
 	}
     
-    
-    // ---------------------- Usuario
-    // -----------------------------------------------//
+    // --------------------------- Admin --------------------//
 
-    @GetMapping("/verdatos_usuario")
-    public String verDatos(Model model, HttpServletRequest request) {
+    @GetMapping("/menuadmin")
+    public String verDatos(Model model) {
 
-        Principal principal = request.getUserPrincipal();
+        model.addAttribute("reparaciones",reparacionesRepository.findAll());
 
-        model.addAttribute("Nombre", principal.getName());
-
-        return "verdatos_usuario";
+        return "menuadmin";
     }
 
-    @PostMapping("/editardatos")
-    public String editarDatos(Model model, HttpServletRequest req) {
+    @PostMapping("/")
+    public String editarDatos() {
 
-        return "cambiardato_susuario";
+        return "";
     }
 
 }

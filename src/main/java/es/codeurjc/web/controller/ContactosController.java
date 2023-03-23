@@ -39,6 +39,7 @@ public class ContactosController {
         } else {
             model.addAttribute("sesionIniciada", false);
             model.addAttribute("userName", "Invitado");
+            model.addAttribute("admin", request.isUserInRole("ADMIN"));
         }
     }
 

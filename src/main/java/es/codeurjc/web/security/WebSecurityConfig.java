@@ -41,6 +41,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         
         // Private pages
         http.authorizeRequests().antMatchers("/reparaciones").hasAnyRole("USER");
+        http.authorizeRequests().antMatchers("/valoraciones/crearvaloracion").hasAnyRole("USER");
+        http.authorizeRequests().antMatchers("/menuadmin").hasAnyRole("ADMIN");
         //http.authorizeRequests().antMatchers("/").hasAnyRole("USER");
         //http.authorizeRequests().antMatchers("/").hasAnyRole("ADMIN");
         
@@ -54,5 +56,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         // Logout
         http.logout().logoutUrl("/logout");
         http.logout().logoutSuccessUrl("/");
+
+        //Registro
+    
     }
 }
