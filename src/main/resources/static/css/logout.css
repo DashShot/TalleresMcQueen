@@ -31,6 +31,9 @@ body {
     display: inline-block;
     margin: 1em;
   }
+  form input:hover {
+    background-color: #666;
+  }
 
   h1 {
     
@@ -68,3 +71,4 @@ body {
     color: white;
     padding: 1em;
   }
+  

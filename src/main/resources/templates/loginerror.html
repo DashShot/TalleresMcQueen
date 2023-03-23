@@ -1,18 +1,21 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Talleres McQueen</title>
-    <link rel="stylesheet" href="/css/inicio.css" />
-  </head>
-  <body>
-    <header>
-        {{>encabezado}}
-    </header>
-	<p>Credenciales incorrectas</p>
-	<a href="/login">Intentelo de nuevo</a>
-	<footer>
-        {{>piedepagina}}
-    </footer>
-  </body>
+<!DOCTYPE html> 
+<html>   
+  <head>     
+    <meta charset="UTF-8">     
+    <title>Talleres McQueen</title>     
+    <link rel="stylesheet" href="/css/login.css"" />   
+  </head>   
+  <body>     
+    <header>         
+      {{>encabezado}}     
+    </header> 	
+    <h1>Credenciales incorrectas</h1>
+    <p>Porfavor intente iniciar sesión o registre el usuario</p>	
+    <form action="/login" method="get">
+      <input type="submit" value="Iniciar Sesión" />
+    </form>    
+    <footer>         
+      {{>piedepagina}}     
+    </footer>   
+  </body> 
 </html>

@@ -96,11 +96,14 @@ public class WebTallerController {
     @PostMapping("/registro")
 	public String registrar(@RequestParam String nombre, @RequestParam String contrasena) {
 
-		if (usuarioRepository.getByNombre(nombre) != null) return "registroerror";
-        Usuario u = new Usuario(nombre,passwordEncoder.encode(contrasena),("USER"));
-		usuarioRepository.save(u);
+		if (usuarioRepository.getByNombre(nombre) != null || nombre == "" || contrasena == ""){
+            return "registroerror";
+        }else{
+            Usuario u = new Usuario(nombre,passwordEncoder.encode(contrasena),("USER"));
+		    usuarioRepository.save(u);
+		    return "registroexito";
+        }
         
-		return "registroexito";
 	}
     
     // --------------------------- Admin --------------------//

@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <title>Talleres McQueen</title>
-    <link rel="stylesheet" href="/css/inicio.css" />
+    <link rel="stylesheet" href="/css/login.css" />
   </head>
   <body>
     <header>
         {{>encabezado}}
     </header>
+        <h1>Inicie Sesión a continuación:</h1>
         <form action="/login" method="post">
             <label>Nombre:</label><input type="text" name="username" /><br />
             <label>Contraseña:</label><input type="password" name="password" /><br />       				
@@ -19,4 +20,4 @@
             {{>piedepagina}}
         </footer>
       </body>
-    </html>
+ </html>

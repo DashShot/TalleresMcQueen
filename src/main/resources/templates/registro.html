@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Talleres McQueen</title>
-    <link rel="stylesheet" href="/css/inicio.css" />
+    <link rel="stylesheet" href="/css/login.css" />
   </head>
   <body>
     <header>
@@ -13,8 +13,8 @@
         <h1>Registrese a continuación:</h1>
         <form action="/registro" method="post">
 
-        <p>Nombre: <textarea name='nombre' rows='1' cols='50' style="resize:none"></textarea></p>       
-        <p>Contraseña: <textarea name='contrasena' rows='1' cols='50' style="resize:none"></textarea></p>
+        <p>Nombre: <textarea name='nombre' rows='1' cols='50' style="resize:none" placeholder="Nombre"></textarea></p>       
+        <p>Contraseña: <textarea name='contrasena' rows='1' cols='50' style="resize:none" placeholder="Contraseña"></textarea></p>
 
         <input type="hidden" name="_csrf" value="{{token}}"/>
         <input type='submit' value='Registrar'>
@@ -23,5 +23,5 @@
         <footer>
                 {{>piedepagina}}
             </footer>
-          </body>
+        </body>
 </html>

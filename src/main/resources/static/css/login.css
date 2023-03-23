@@ -1,0 +1,89 @@
+/*Estilos para el encabezado*/
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+ }
+ 
+ /*Estilos para la etiqueta de nombre*/
+ label {
+    display: block;
+    font-size: 18px;
+    margin-top: 20px;
+    color: #fff;
+ }
+ h1{
+    color: #fff; 
+ }
+ /*Estilos para los campos de entrada*/
+ input[type="text"], input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+ }
+ 
+ /*Estilos para el botón de inicio de sesión*/
+ input[type="submit"] {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+ }
+ 
+ /*Estilos para el pie de página*/
+ footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+ }
+ footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 1em;
+  }
+  form input:hover {
+    background-color: #666;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  form input {
+    text-align: center;
+  }
+  body {
+    font-family: Arial, sans-serif;
+   background: linear-gradient(to bottom, rgb(80, 11, 11), rgb(80, 11, 11));
+   margin: 0;
+   padding: 0;
+   position: relative;
+   background-color: red;
+}
+button{
+   display: block;
+   margin-top: 20px;
+   padding: 10px 20px;
+   background-color: #333;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 18px;
+}

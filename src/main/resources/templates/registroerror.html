@@ -3,14 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <title>Talleres McQueen</title>
-    <link rel="stylesheet" href="/css/inicio.css" />
+    <link rel="stylesheet" href="/css/login.css" />
   </head>
   <body>
     <header>
         {{>encabezado}}
     </header>
 	<p>Credenciales incorrectas</p>
-	<a href="/registro">Intentelo de nuevo</a>
+  <p>Nombre o contraseña incorrecta o el Usuario ya existe</p>	
+
+  <form action="/registro" method="get">
+    <input type="submit" value="Registrar Usuario" />
+  </form>  
 	<footer>
         {{>piedepagina}}
     </footer>
