@@ -38,14 +38,14 @@ public class DatabaseInitializer {
     @PostConstruct
     public void init() throws IOException, URISyntaxException{
 
-        Usuario user1 = new Usuario("Pedro", passwordEncoder.encode("pass1"), "USER");
-        Usuario user2 =new Usuario("Maria", passwordEncoder.encode("pass2"), "USER");
-        Usuario user3 =new Usuario("Juan", passwordEncoder.encode("pass3"), "USER");
-        Usuario user4 =new Usuario("Jose", passwordEncoder.encode("pass4"), "USER");
-        Usuario user5 =new Usuario("Jose", passwordEncoder.encode("pass5"), "USER");
-        Usuario user6 =new Usuario("Aitor", passwordEncoder.encode("pass6"), "USER");
-        Usuario user7 =new Usuario("Alejandro", passwordEncoder.encode("pass7"), "USER");
-        Usuario user8 =new Usuario("JoseLuis", passwordEncoder.encode("pass8"), "USER");
+        Usuario user1 = new Usuario("Pedro", passwordEncoder.encode("pass1"),"correo1", "USER");
+        Usuario user2 =new Usuario("Maria", passwordEncoder.encode("pass2"), "correo2","USER");
+        Usuario user3 =new Usuario("Juan", passwordEncoder.encode("pass3"), "correo3","USER");
+        Usuario user4 =new Usuario("Jose", passwordEncoder.encode("pass4"), "correo4","USER");
+        Usuario user5 =new Usuario("Jose", passwordEncoder.encode("pass5"), "correo5","USER");
+        Usuario user6 =new Usuario("Aitor", passwordEncoder.encode("pass6"), "correo6","USER");
+        Usuario user7 =new Usuario("Alejandro", passwordEncoder.encode("pass7"), "correo7","USER");
+        Usuario user8 =new Usuario("JoseLuis", passwordEncoder.encode("pass8"), "correo8","USER");
 
         Usuario admin = new Usuario("Admin",passwordEncoder.encode("admin"),"ADMIN");
 
