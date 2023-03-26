@@ -1,0 +1,53 @@
+@charset "UTF-8";
+.items li {
+    border: 1px solid white;
+    padding: 10px;
+    
+}
+
+.items li:hover {
+    background-color: #f7f7f7;
+}
+
+.items li:active {
+    background-color: red;
+}
+
+.items li a1 {
+    display: block;
+}
+
+.items li:nth-child(odd) {
+    background-color: #1c1c1c;
+}
+
+.items li:nth-child(even) {
+    background-color: #3a3a3a;
+}
+a1 {
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  .items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+  }
+  
+  .contactos {
+    float: left;
+    width: 50%;
+  }
+  
+  .mecanicos {
+    float: right;
+    width: 50%;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom,red, rgb(78, 18, 18)); /* Aplica un degradado de arriba hacia abajo desde el rojo hasta el negro */
+    margin: 0;
+    padding: 0;
+    position: relative; /* Permitir que la posición de la imagen se calcule en relación a este elemento */
+  }

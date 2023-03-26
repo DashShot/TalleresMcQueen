@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ver Reparaciones</title>
+
+	<link rel="stylesheet" href="/css/reparacion.css">
+</head>
+
+<header>
+{{>encabezado}}
+</header>
+		<h1>Reparaciones Realizadas</h1>
+		<ul class="items">
+			{{#reparaciones}}
+			<li>{{usuario}} <br> {{tipo}} - Tiempo tardado: {{tiempo}} min </li>
+			{{/reparaciones}}
+		</ul>
+
+		<form action="/reparaciones/nuevareparacion">
+			<input type="submit" value="Hacer una nueva Reparacion" />
+		</form> 
+<footer>
+{{>piedepagina}}
+</footer>

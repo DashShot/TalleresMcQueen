@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Contactos</title>
+	<link rel="stylesheet" href="/css/encabezado.css">
+	<link rel="stylesheet" href="/css/contactos.css">
+</head>
+<body>
+	{{>encabezado}}	
+	<h2>Contactos</h2>
+	<ul class="items">
+		{{#talleres}} 
+		<li><a1> {{direccion}} - {{email}} - {{telefono}} </a1></li>
+		{{/talleres}}
+	</ul>
+	<h2>Mecanicos</h2>
+	<ul class="items">
+		{{#mecanicos}} 
+		<li><a1> {{nombre}}  </a1></li>
+		{{/mecanicos}}
+	</ul>
+	</body>
+	<footer>
+		{{>piedepagina}}
+	</footer>
+</html>

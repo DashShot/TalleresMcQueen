@@ -1,0 +1,61 @@
+<html>
+<head>
+    <meta charset = "UTF-8">
+    <link rel="stylesheet" href="/css/encabezado.css" />
+</head>
+<body>
+    <header>
+    <h1>Talleres McQueen</h1>
+    <style>
+        form{display: inline;}
+    </style>
+
+    <form action="/">
+        <input type="submit" value="Inicio" />
+    </form>
+    {{^admin}}
+    <form action="/contactos" method="get">
+        <input type="submit" value="Acerca Nuestra" />
+    </form>
+    {{/admin}}    
+    {{^admin}}
+    <form action="/valoraciones" method="get">
+        <input type="submit" value="Valoraciones de Nuestros Clientes" />
+    </form>
+    {{/admin}}
+    {{^admin}}
+    <form action ="/reparaciones" method="get">
+        <input type="submit" value ="Ver reparaciones de los Clientes"/>
+    </form>
+    {{/admin}}
+    {{^sesionIniciada}}
+    <form action="/login" method="get">
+        <input type="submit" value="Iniciar Sesión" />
+    </form>
+    {{/sesionIniciada}}
+    
+    {{#sesionIniciada}}
+    <form action="/logout" method="get">
+        <input type="submit" value="Cerrar Sesión" />
+    </form>
+    {{/sesionIniciada}}
+
+    {{^sesionIniciada}}
+    <form action="/registro" method="get">
+        <input type="submit" value="Registrar Usuario" />
+    </form>
+    {{/sesionIniciada}}
+    
+    {{#admin}}
+    <form action="/menuadmin" method="get">
+        <input type="submit" value ="Menu de Aministrador"/>
+    </form>
+    {{/admin}}
+
+    <div id="usuario">
+        {{userName}}
+    </div>
+    
+    </header>
+</body>
+    
