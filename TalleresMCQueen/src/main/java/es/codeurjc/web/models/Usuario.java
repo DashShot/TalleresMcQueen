@@ -29,6 +29,9 @@ public class Usuario {
     @JsonIgnore
     private String contrasena;
 
+    @Column(unique=true)
+    private String email;
+
     @ElementCollection(fetch = FetchType.EAGER)
     private List<String> roles;
 
@@ -40,10 +43,11 @@ public class Usuario {
 
 
     public Usuario(){}
-    public Usuario(String nombre, String contrasena, String... roles){
+    public Usuario(String nombre, String contrasena, String email, String... roles){
         super();
         this.nombre = nombre;
         this.contrasena = contrasena;
+        this.email = email;
         this.roles = List.of(roles);
     }
 
