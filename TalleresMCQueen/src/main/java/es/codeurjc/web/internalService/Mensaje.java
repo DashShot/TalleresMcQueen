@@ -1,4 +1,4 @@
-package es.codeurjc.InternalService;
+package es.codeurjc.web.internalService;
 
 import java.io.Serializable;
 

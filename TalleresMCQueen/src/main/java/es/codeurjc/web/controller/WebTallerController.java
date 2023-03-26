@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import es.codeurjc.InternalService.Producer;
+import es.codeurjc.web.internalService.Producer;
 import es.codeurjc.web.models.Usuario;
 import es.codeurjc.web.repository.ReparacionesRepository;
 import es.codeurjc.web.repository.UsuarioRepository;

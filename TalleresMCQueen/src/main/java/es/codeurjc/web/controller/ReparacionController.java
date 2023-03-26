@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import es.codeurjc.InternalService.Producer;
 import es.codeurjc.web.models.Reparacion;
 import es.codeurjc.web.models.Usuario;
 import es.codeurjc.web.repository.ReparacionesRepository;
@@ -33,8 +32,7 @@ public class ReparacionController {
   @Autowired
   private UsuarioRepository usuarioRepository;
 
-  @Autowired
-  private Producer producer;
+ 
   
   @ModelAttribute
   public void addAttributes(Model model, HttpServletRequest request) {

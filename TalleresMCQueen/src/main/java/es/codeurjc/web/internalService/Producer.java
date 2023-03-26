@@ -1,4 +1,4 @@
-package es.codeurjc.InternalService;
+package es.codeurjc.web.internalService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
