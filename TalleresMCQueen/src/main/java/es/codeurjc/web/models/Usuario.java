@@ -61,6 +61,9 @@ public class Usuario {
     public List<String> getRoles(){ return this.roles;}
     public void setRoles(List<String> roles){this.roles = roles;}
     
+    public String getCorreo(){return this.email;}
+    public void setCorreo(String email){this.email=email;} 
+
     public void addRol(String rol) {
 		this.roles.add(rol);
 	}
