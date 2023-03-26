@@ -9,7 +9,7 @@ body {
   
   .imagen-fondo {
     height: calc(150vh - 500px); /* ajusta la altura según la altura del texto y el pie de página */
-    background-image: url("https://raw.githubusercontent.com/DashShot/TalleresMcQueen/main/src/main/resources/static/imagenes/TalleresMcQueen.jpg"); 
+    background-image: url("https://raw.githubusercontent.com/DashShot/TalleresMcQueen/main/TalleresMCQueen/src/main/resources/static/imagenes/TalleresMcQueen.jpg"); 
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
