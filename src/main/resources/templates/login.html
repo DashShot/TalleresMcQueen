@@ -12,7 +12,8 @@
         <h1>Inicie Sesión a continuación:</h1>
         <form action="/login" method="post">
             <label>Nombre:</label><input type="text" name="username" /><br />
-            <label>Contraseña:</label><input type="password" name="password" /><br />       				
+            <label>Contraseña:</label><input type="password" name="password" /><br />  
+                 				
             <input type="hidden" name="_csrf" value="{{token}}"/>
             <input type="submit" value="Iniciar Sesión" /><br />
         </form>

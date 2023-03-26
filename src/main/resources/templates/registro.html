@@ -12,9 +12,8 @@
        
         <h1>Registrese a continuación:</h1>
         <form action="/registro" method="post">
-
-        <p>Nombre: <textarea name='nombre' rows='1' cols='50' style="resize:none" placeholder="Nombre"></textarea></p>       
-        <p>Contraseña: <textarea name='contrasena' rows='1' cols='50' style="resize:none" placeholder="Contraseña"></textarea></p>
+          <label>Nombre:</label><input type="text" name="nombre" /><br />
+          <label>Contraseña:</label><input type="password" name="contrasena" /><br />  
 
         <input type="hidden" name="_csrf" value="{{token}}"/>
         <input type='submit' value='Registrar'>
