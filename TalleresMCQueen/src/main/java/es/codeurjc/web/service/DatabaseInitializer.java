@@ -47,7 +47,7 @@ public class DatabaseInitializer {
         Usuario user7 =new Usuario("Alejandro", passwordEncoder.encode("pass7"), "correo7","USER");
         Usuario user8 =new Usuario("JoseLuis", passwordEncoder.encode("pass8"), "correo8","USER");
 
-        Usuario admin = new Usuario("Admin",passwordEncoder.encode("admin"),"ADMIN");
+        Usuario admin = new Usuario("Admin",passwordEncoder.encode("admin"),"correo9@","ADMIN");
 
         usuarioService.save(user1);
         usuarioService.save(user2);
