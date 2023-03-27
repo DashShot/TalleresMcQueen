@@ -1,4 +1,4 @@
-package main.java.es.codeurjc.InternalService;
+package es.codeurjc.internalservice;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ public class EmailSenderService {
     public void sendSimpleEmail(String toEmail, String subject, String body) {
 
         SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom("fromemail@gmail.com");
+        message.setFrom("talleresmcqueendad@gmail.com");
         message.setTo(toEmail);
         message.setText(body);
         message.setSubject(subject);
