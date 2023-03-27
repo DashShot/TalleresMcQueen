@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-InternalServiceApplication<InternalService>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "es.codeurjc.internalservice.InternalServiceApplication",
+            "projectName": "InternalService",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
