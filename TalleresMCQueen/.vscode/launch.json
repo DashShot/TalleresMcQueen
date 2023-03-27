@@ -1,6 +1,12 @@
 {
     "configurations": [
-        
+        {
+            "type": "java",
+            "name": "Application",
+            "request": "launch",
+            "mainClass": "es.codeurjc.Application",
+            "projectName": "TalleresMcQueen"
+        },
         {
             "type": "java",
             "name": "Spring Boot-Application<TalleresMcQueen>",
