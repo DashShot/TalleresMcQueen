@@ -25,6 +25,57 @@ ENTIDADES PRINCIPALES:
 FUNCIONALIDADES DEL SERVICIO INTERNO:
  - Envío de correos electónicos en la creación de cuentas mediante el registro y confirmación de esta, el estado de las piezas y actualización de ofertas y avisos de subidas en el precio total (si varía en función de las horas o de la necesidad piezas nuevas).
 
+----------ACTUALIZACIONES FASE 3-----------
+
+NUEVAS CAPTURAS DE PANTALLA:
+
+INICIO:
+
+![Inicio](https://user-images.githubusercontent.com/123817881/228057698-b2f439bb-ddce-46e0-a3b8-66bbbfc51910.png)
+
+ACERCA NUESTRA:
+
+![AcercaNuestra](https://user-images.githubusercontent.com/123817881/228058086-b1c89da5-744e-4a06-983f-b8117587ee9b.png)
+
+VALORACIONES:
+
+![Valoraciones](https://user-images.githubusercontent.com/123817881/228058132-a24d9c0e-318e-4440-b557-315dcb7363e3.png)
+
+INICIAR SESION:
+
+![IniciarSesion](https://user-images.githubusercontent.com/123817881/228058174-b345f8ac-2c20-43ef-874e-072a0ee315f2.png)
+
+REGISTRAR USUARIO:
+
+![RegistrarUsuario](https://user-images.githubusercontent.com/123817881/228058330-6cde7e61-18ea-4f58-87d6-afe44d3bc85c.png)
+
+NUEVA VALORACION:
+
+![NuevaValoracion](https://user-images.githubusercontent.com/123817881/228058302-871b86e2-2f40-43dc-ba1d-1bcb898e0042.png)
+
+VER REPARACIONES:
+
+![ReparacionesRealizadas](https://user-images.githubusercontent.com/123817881/228058312-7756bd25-d6d9-4e5f-af81-f43eae2cff66.png)
+
+NUEVA REPARACION:
+
+![NuevaReparacion](https://user-images.githubusercontent.com/123817881/228058290-eafb0a6d-58ee-485f-8bf9-8391f80a0f10.png)
+
+CERRAR SESIÓN:
+
+![CerrarSesion](https://user-images.githubusercontent.com/123817881/228058226-e21e6210-2e17-4e31-8bb6-972bcb8f4555.png)
+
+INICIO ADMINISTRADOR:
+
+![InicioAdmin](https://user-images.githubusercontent.com/123817881/228058264-92b10b68-efc5-4125-acdc-94fb58d56c58.png)
+
+MENU ADMINISTRADOR:
+
+![MenuAdministrador](https://user-images.githubusercontent.com/123817881/228058278-048abafb-4b5d-47cc-8003-93a4719e5cac.png)
+
+
+
+
 ----------ACTUALIZACIONES FASE 2-----------
 
 CAPTURAS DE PANTALLA:
