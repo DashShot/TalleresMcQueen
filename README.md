@@ -55,13 +55,13 @@ Utilizando el entorno de desarrollo de eclipse, se ha realizado la compilación 
 
 4- Acceso a la máquina virtal
 
-- Dede el terminal, ejecutaremos el siguiente comando para acceder a la máquina: "ssh -i [Ssh_MaquinaVirtual.pem] [direccion de la máquina --> ubuntu@IP:Directorio] 
+ - Dede el terminal, ejecutaremos el siguiente comando para acceder a la máquina: "ssh -i [Ssh_MaquinaVirtual.pem] [direccion de la máquina --> ubuntu@IP:Directorio] 
 
 5- Configuracion de los archivos necesarios en la máquina virtual
 
--Primero actualizar los repositorios con: "sudo apt update && upgrade"
+ -Primero actualizar los repositorios con: "sudo apt update && upgrade"
 
-MYSQL:
+ ------------------MYSQL:-------------------------
 
 Seguir los siguientes pasos:
 
@@ -86,7 +86,7 @@ Seguir los siguientes pasos:
  
 
  
-RABBITMQ:
+--------------RABBITMQ:----------------
 
 Seguir los siguientes pasos:
 
