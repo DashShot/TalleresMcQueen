@@ -75,9 +75,12 @@ Seguir los siguientes pasos:
 
 6- Ejecutar los jar:
 
-PAra  finalizar ejecutaremos los JAR en en cada terminal que necesitems: Ej: si tenemos dos JAR necestaremos dos terminales para su ejecucion
+Para  finalizar ejecutaremos los JAR en en cada terminal que necesitems: Ej: si tenemos dos JAR necestaremos dos terminales para su ejecucion
  
  COMANDO: java -jar [Archivo_Jar]
+ 
+ EJ: ![image](https://user-images.githubusercontent.com/123817881/228233363-e2cc4ede-f259-41bc-9c8b-a00e0c7cbaa6.png)
+
 
 NUEVAS CAPTURAS DE PANTALLA:
 
