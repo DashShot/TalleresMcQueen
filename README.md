@@ -79,7 +79,8 @@ Para  finalizar ejecutaremos los JAR en en cada terminal que necesitems: Ej: si 
  
  COMANDO: java -jar [Archivo_Jar]
  
- EJ: ![image](https://user-images.githubusercontent.com/123817881/228233363-e2cc4ede-f259-41bc-9c8b-a00e0c7cbaa6.png)
+------------------ EJEMPLO-------------------------
+ ![image](https://user-images.githubusercontent.com/123817881/228233363-e2cc4ede-f259-41bc-9c8b-a00e0c7cbaa6.png)
 
 
 NUEVAS CAPTURAS DE PANTALLA:
