@@ -66,10 +66,15 @@ MYSQL:
 Seguir los siguientes pasos:
 
  1- INSTALA MYSQL
+ 
  ![image](https://user-images.githubusercontent.com/123817881/228233738-ca85f779-4bcc-41ca-ab1a-b9891a58bf97.png)
+ 
  2- CONFIGURAR MYSQL
+ 
  ![image](https://user-images.githubusercontent.com/123817881/228233807-959ff0c0-cbb2-4f47-bd8b-69c661038e10.png)
+ 
  3- AJUSTAR LA AUTENTICACIÓN Y LOS PRIVILEGIOS DE USUARIO
+ 
  ![image](https://user-images.githubusercontent.com/123817881/228233886-8e3e3afe-fbcd-44bb-8f11-4b4e3a0e053b.png)
  ![image](https://user-images.githubusercontent.com/123817881/228233947-7ecc8c93-79e3-440d-be70-ae15d4921241.png)
  ![image](https://user-images.githubusercontent.com/123817881/228234286-261eb6e8-f82f-4de4-be12-7d7ba2a4852a.png)
@@ -85,8 +90,30 @@ RABBITMQ:
 
 Seguir los siguientes pasos:
 
- 1-
+ 1-INSTALAR PREREQUISITOS
+ 
+ ![image](https://user-images.githubusercontent.com/123817881/228235150-5f5fd0b7-0d86-44c3-972a-9d11fabbbcfa.png)
+ ![image](https://user-images.githubusercontent.com/123817881/228235188-60438c28-a15e-4e76-bf9f-dbcfaed7bdbf.png)
+ ![image](https://user-images.githubusercontent.com/123817881/228235259-93ad4c46-026e-4f8f-a88c-c630bbeeb554.png)
 
+ 
+ 2- INTALAR RABBITMQ - PAQUETES ERLANG
+ 
+ ![image](https://user-images.githubusercontent.com/123817881/228234871-d5382191-cfad-4b4c-aa1b-20cb8412631e.png)
+ ![image](https://user-images.githubusercontent.com/123817881/228234897-bfb31ee5-48e0-4fc4-8fca-db1df93f248a.png)
+ ![image](https://user-images.githubusercontent.com/123817881/228234962-fb0a10a8-6da4-4de1-b7b2-e5f69e886461.png)
+ ![image](https://user-images.githubusercontent.com/123817881/228234998-d1d78e9b-1e1d-4424-924d-3424c1c602a1.png)
+  
+ 3- CONFIGURAR RABBITMQ
+
+ ![image](https://user-images.githubusercontent.com/123817881/228235543-6be41de7-47ca-47a3-b776-8ffee880e2ee.png)
+ ![image](https://user-images.githubusercontent.com/123817881/228235581-30c5fe31-17df-4355-8911-a506353162a1.png)
+ ![image](https://user-images.githubusercontent.com/123817881/228235625-b21b0751-2561-4e61-9b3c-02a983f74619.png)
+
+
+ GUIA WEB-MAS INFORMACION:
+ https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04-es
+ 
 6- Ejecutar los jar:
 
 Para  finalizar ejecutaremos los JAR en en cada terminal que necesitems: Ej: si tenemos dos JAR necestaremos dos terminales para su ejecucion
