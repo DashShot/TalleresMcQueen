@@ -76,6 +76,7 @@ Seguir los siguientes pasos:
  3- AJUSTAR LA AUTENTICACIÓN Y LOS PRIVILEGIOS DE USUARIO
  
  ![image](https://user-images.githubusercontent.com/123817881/228233886-8e3e3afe-fbcd-44bb-8f11-4b4e3a0e053b.png)
+ ![image](https://user-images.githubusercontent.com/123817881/228237561-a76ab74a-c5ae-454d-8f27-6bc6b4d36844.png)
  ![image](https://user-images.githubusercontent.com/123817881/228237445-dd6157cd-5e77-4bff-b1c0-02e29ceb73c6.png)
  ![image](https://user-images.githubusercontent.com/123817881/228237161-b7b73c7e-2812-4e04-9a32-875577fe067d.png)
  ![image](https://user-images.githubusercontent.com/123817881/228234348-c00768fc-3f4c-4492-a5bb-7b862e64d80a.png)
