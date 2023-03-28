@@ -32,6 +32,52 @@ Instrucciones para desplegar la aplicación
 
 Utilizando el entorno de desarrollo de eclipse, se ha realizado la compilación de los dos proyectos en archivos "jar", consiguiendo así un "jar" para desplegar la página web TalleresMcQueen y otro "jar" para desplegar el servicio interno de la página. Una vez creada la máquina virtual en OpenStack, utilizando el escritorio Ubuntu proporcionado por MyApps, se han subido los archivos mencionados anteriormente mediante la terminal. Además de ello, ha sido necesario instalar mySQL y RabbitMQ debido a que el proyecto los utiliza. Por último, ejecutando ambos archivos jar se consigue poner en correcto funcionamiento el servicio creado.
 
+---PASOS PARA LA EJECUCION---
+
+1- Generar los archivos Jar desde el IDE:
+
+- Abrir el archivo en le id, ir a este seleccionar run As -> Maven Build
+
+![image](https://user-images.githubusercontent.com/123817881/228230262-fcfe5717-8b1a-473b-97d3-41c68adf4b6c.png)
+
+-En la pantalla siguiente emergente que salga, se introducirá el string "package" y seleccionar la opción de "test" para eliminar los test 
+
+![image](https://user-images.githubusercontent.com/123817881/228230379-9df81c5f-9483-4776-b456-b1414c2e553e.png)
+
+2- Generar la máquina virtual de ubuntu --> Virtual Box , Open Stack , Azure, Digital Ocean ...
+
+  - En nuestro caso OpenStack --> los videos tutoriales del aula virtual
+  - OpenStack te ofrecerá una clave ssh que más adelante se utilizará 
+
+3- Descargar los archivos en la máquina virtual
+
+- Desde el repositorio accederemos a un terminal y ejecutaremos el siguiente comando "scp -i [SSH_MaquinaVirtual.pem] [Archivo.JAR] [direccion de la máquina --> ubuntu@IP:Directorio] --> este comando copia el JAR seleccionado dentro de nuestra máquina virtual
+
+4- Acceso a la máquina virtal
+
+- Dede el terminal, ejecutaremos el siguiente comando para acceder a la máquina: "ssh -i [Ssh_MaquinaVirtual.pem] [direccion de la máquina --> ubuntu@IP:Directorio] 
+
+5- Configuracion de los archivos necesarios en la máquina virtual
+
+-Primero actualizar los repositorios con: "sudo apt update && upgrade"
+
+MYSQL:
+
+Seguir los siguientes pasos:
+
+ 1- 
+ 
+RABBITMQ:
+
+Seguir los siguientes pasos:
+
+ 1-
+
+6- Ejecutar los jar:
+
+PAra  finalizar ejecutaremos los JAR en en cada terminal que necesitems: Ej: si tenemos dos JAR necestaremos dos terminales para su ejecucion
+ 
+ COMANDO: java -jar [Archivo_Jar]
 
 NUEVAS CAPTURAS DE PANTALLA:
 
