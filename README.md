@@ -65,7 +65,21 @@ MYSQL:
 
 Seguir los siguientes pasos:
 
- 1- 
+ 1- INSTALA MYSQL
+ ![image](https://user-images.githubusercontent.com/123817881/228233738-ca85f779-4bcc-41ca-ab1a-b9891a58bf97.png)
+ 2- CONFIGURAR MYSQL
+ ![image](https://user-images.githubusercontent.com/123817881/228233807-959ff0c0-cbb2-4f47-bd8b-69c661038e10.png)
+ 3- AJUSTAR LA AUTENTICACIÓN Y LOS PRIVILEGIOS DE USUARIO
+ ![image](https://user-images.githubusercontent.com/123817881/228233886-8e3e3afe-fbcd-44bb-8f11-4b4e3a0e053b.png)
+ ![image](https://user-images.githubusercontent.com/123817881/228233947-7ecc8c93-79e3-440d-be70-ae15d4921241.png)
+ ![image](https://user-images.githubusercontent.com/123817881/228234286-261eb6e8-f82f-4de4-be12-7d7ba2a4852a.png)
+ ![image](https://user-images.githubusercontent.com/123817881/228234348-c00768fc-3f4c-4492-a5bb-7b862e64d80a.png)
+
+ 
+ GUIA WEB:
+ https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04-es
+ 
+
  
 RABBITMQ:
 
