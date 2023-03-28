@@ -24,6 +24,15 @@ FUNCIONALIDADES DEL SERVICIO INTERNO:
 
 ----------ACTUALIZACIONES FASE 3-----------
 
+Documentación de la interfaz del servicio interno.
+
+El servicio interno utiliza RabbitMq para crear una cola de mensajes y comunicarse con la página web, de esta forma, se obtienen los mensajes que tiene que mandar con todos los datos necesarios (email, asunto y el cuerpo del mensaje). Para el envío de mensajes se han utilizado los recursos proporcionados por Spring Email.
+
+Instrucciones para desplegar la aplicación
+
+Utilizando el entorno de desarrollo de eclipse, se ha realizado la compilación de los dos proyectos en archivos "jar", consiguiendo así un "jar" para desplegar la página web TalleresMcQueen y otro "jar" para desplegar el servicio interno de la página. Una vez creada la máquina virtual en OpenStack, utilizando el escritorio Ubuntu proporcionado por MyApps, se han subido los archivos mencionados anteriormente mediante la terminal. Además de ello, ha sido necesario instalar mySQL y RabbitMQ debido a que el proyecto los utiliza. Por último, ejecutando ambos archivos jar se consigue poner en correcto funcionamiento el servicio creado.
+
+
 NUEVAS CAPTURAS DE PANTALLA:
 
 INICIO:
@@ -117,10 +126,3 @@ MODELO DE DATOS:
  --->DIAGRAMA ENTIDAD RELACION
  ![Modelo](https://user-images.githubusercontent.com/123817881/221811846-f557af82-69d2-4278-9ab9-7c29493e3325.png)
 
-Documentación de la interfaz del servicio interno.
-
-El servicio interno utiliza RabbitMq para crear una cola de mensajes y comunicarse con la página web, de esta forma, se obtienen los mensajes que tiene que mandar con todos los datos necesarios (email, asunto y el cuerpo del mensaje). Para el envío de mensajes se han utilizado los recursos proporcionados por Spring Email.
-
-Instrucciones para desplegar la aplicación
-
-Utilizando el entorno de desarrollo de eclipse, se ha realizado la compilación de los dos proyectos en archivos "jar", consiguiendo así un "jar" para desplegar la página web TalleresMcQueen y otro "jar" para desplegar el servicio interno de la página. Una vez creada la máquina virtual en OpenStack, utilizando el escritorio Ubuntu proporcionado por MyApps, se han subido los archivos mencionados anteriormente mediante la terminal. Además de ello, ha sido necesario instalar mySQL y RabbitMQ debido a que el proyecto los utiliza. Por último, ejecutando ambos archivos jar se consigue poner en correcto funcionamiento el servicio creado.
