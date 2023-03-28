@@ -119,7 +119,7 @@ Seguir los siguientes pasos:
 
 Para  finalizar ejecutaremos los JAR en en cada terminal que necesitems: Ej: si tenemos dos JAR necestaremos dos terminales para su ejecucion
  
- COMANDO: java -jar [Archivo_Jar]
+ COMANDO: java -jar [Archivo_Jar] -spring.mail.username=[correo] --spring.mail.password=[contraseña]
  
 ------------------ EJEMPLO-------------------------
  ![image](https://user-images.githubusercontent.com/123817881/228233363-e2cc4ede-f259-41bc-9c8b-a00e0c7cbaa6.png)
