@@ -1,0 +1,46 @@
+services:
+  tmq_haproxy:
+    image:
+    ports:
+      -
+    volumes:
+      -
+    sysctls:
+  
+  tmq_mysql:
+    image: mysql:8.0
+    volumes:
+      -./Database/:/var/lib/mysql 
+    environment:
+      - MYSQL_ROOT_PASSWORD=root3434
+      - MYSQL_DATABASE=db_talleresmcqueen
+  
+  tmq_rabbitmq:
+    image: rabbitmq:3.12-rc-managment
+  
+  tmq_web1:
+    image: dashshot/docwebtmq
+    depepends_on:
+      -  tmq_haproxy
+      -  tmq_mysql
+      -  tmq_rabbitmq
+      -  tmq_intserv
+    restart: on-failure
+  
+  tmq_web2:
+    image: dashshot/docwebtmq
+    depepends_on:
+      -  tmq_haproxy
+      -  tmq_mysql
+      -  tmq_rabbitmq
+      -  tmq_intserv
+    restart: on-failure
+
+  tmq_intserv:
+    image: dashshot/docintserv
+    depepends_on:
+      -  tmq_haproxy
+      -  tmq_mysql
+      -  tmq_rabbitmq
+    restart: on-failure
+  

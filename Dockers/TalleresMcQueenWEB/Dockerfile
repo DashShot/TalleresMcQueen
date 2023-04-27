@@ -1,5 +1,5 @@
 # Imagen base
-FROM openjdk:11
+FROM openjdk:17
 
 # Se crea el directorio de trabajo
 RUN mkdir /usr/src/TMQWeb
@@ -8,7 +8,7 @@ RUN mkdir /usr/src/TMQWeb
 WORKDIR /usr/src/TMQWeb
 
 # Se copia el .jar al directorio
-COPY ./.jar /usr/src/TMQWeb
+COPY ./TalleresMcQueen-0.1.0-SNAPSHOT.jar /usr/src/TMQWeb
 
 # Indicamos un puerto de apertura para conectarnos
 EXPOSE 8443
