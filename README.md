@@ -22,6 +22,13 @@ ENTIDADES PRINCIPALES:
 FUNCIONALIDADES DEL SERVICIO INTERNO:
  - Envío de correos electónicos en la creación de cuentas mediante el registro y confirmación de esta, el estado de las piezas y actualización de ofertas y avisos de subidas en el precio total (si varía en función de las horas o de la necesidad piezas nuevas).
 
+----------ACTUALIZACIONES FASE 4-----------
+
+![HAProxy](https://user-images.githubusercontent.com/123817881/235795531-6f8f5227-c3f3-4312-97f1-0e250188dfc4.png)
+
+En el sistema descrito, el HAProxy actúa como un intermediario entre el usuario y las dos aplicaciones. El HAProxy se encarga de distribuir de manera equilibrada la carga de trabajo entre las dos aplicaciones. Ambas aplicaciones interactúan con una base de datos, intercambiando datos con ella, y también se comunican con una cola de mensajes en RabbitMQ, enviando y recibiendo mensajes. Además, un servicio interno también está presente en el sistema, interactuando con la base de datos y recolectando mensajes de la cola de mensajes.
+
+
 ----------ACTUALIZACIONES FASE 3-----------
 
 Documentación de la interfaz del servicio interno.
