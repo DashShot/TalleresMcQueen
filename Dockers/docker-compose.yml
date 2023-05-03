@@ -1,12 +1,13 @@
 services:
-  tmq_haproxy:
-    image:
+  tmq_haproxy: 
+    image: dashshot/haproxy
     ports:
-      -
+      - 8404:8404
+      - 8443:443
     volumes:
-      -
+      -   ./HAProxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
     sysctls:
-  
+      -   net.ipv4.ip_unprivileged_port_start=0
   tmq_mysql:
     image: mysql:8.0
     volumes:
