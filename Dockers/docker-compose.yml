@@ -1,53 +1,51 @@
 version: '3'
 services:
-<<<<<<< HEAD
   db: 
     image: mysql:8
-=======
-  tmq_haproxy: 
-    image: dashshot/haproxy
-    ports:
-      - 8404:8404
-      - 8443:443
-    volumes:
-      -   ./HAProxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
-    sysctls:
-      -   net.ipv4.ip_unprivileged_port_start=0
-  tmq_mysql:
-    image: mysql:8.0
-    volumes:
-      -./Database/:/var/lib/mysql 
->>>>>>> b8c4f7ab472aa503f5c3170c9923ddb626c573b3
     environment:
       - MYSQL_ROOT_PASSWORD=root3434
       - MYSQL_DATABASE=db_talleresmcqueen
-  web:
+  
+  web1:
+    container_name: web1
     build: TalleresMcQueenWEB/.
     ports:
       - "8443:8443"
     expose: 
       - "8443"
-    restart: unless-stopped
+    restart: 
+      unless-stopped
     environment:
       - SPRING_RABBITMQ_HOST=broker
-      - SPRING_DATASOURCE_URL=jdbc:mysql://104.208.76.196/db_talleresmcqueen
-      - APP_SERVICIO_REST=loadbalancer 
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db/db_talleresmcqueen
+      - APP_SERVICIO_REST=loadbalancer   
+ 
+  web2:
+    container_name: web2
+    build: TalleresMcQueenWEB/.
+    expose:
+      - "8443"
+    restart:
+      unless-stopped
+    environment:
+      - SPRING_RABBITMQ_HOST=broker
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db/db_talleresmcqueen
+      - APP_SERVICIO_REST=loadbalancer
+
   
   broker:
     image: rabbitmq
+
   rabbitmq:
     build: InternalService/.
     environment:
-      - SPRING_RABBITMQ_HOST=broker
-    deploy:
-      mode: replicated
-      
+      - SPRING_RABBITMQ_HOST=broker    
       
   loadbalancer:
     image: haproxy:2.7.3
     ports:
      - "443:443"
-     - "8443:8443"
+     - "8282:8282"
     volumes:
      - "./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg"
     restart: unless-stopped
