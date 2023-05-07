@@ -1,7 +1,23 @@
 version: '3'
 services:
+<<<<<<< HEAD
   db: 
     image: mysql:8
+=======
+  tmq_haproxy: 
+    image: dashshot/haproxy
+    ports:
+      - 8404:8404
+      - 8443:443
+    volumes:
+      -   ./HAProxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+    sysctls:
+      -   net.ipv4.ip_unprivileged_port_start=0
+  tmq_mysql:
+    image: mysql:8.0
+    volumes:
+      -./Database/:/var/lib/mysql 
+>>>>>>> b8c4f7ab472aa503f5c3170c9923ddb626c573b3
     environment:
       - MYSQL_ROOT_PASSWORD=root3434
       - MYSQL_DATABASE=db_talleresmcqueen
