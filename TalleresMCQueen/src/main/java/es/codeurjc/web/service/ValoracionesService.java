@@ -20,7 +20,7 @@ public class ValoracionesService {
     public List<Valoraciones> findAll(){
         return valoracionesRepository.findAll();
     } 
-
+    
     public boolean exist(long id) {
 		return valoracionesRepository.existsById(id);
 	}
