@@ -1,7 +1,5 @@
 package es.codeurjc;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.springframework.amqp.core.Queue;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,7 +14,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableCaching
 public class Application {
 
-	private static final Log LOG = LogFactory.getLog(Application.class);
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
@@ -29,7 +26,6 @@ public class Application {
 
 	@Bean
     public CacheManager cacheManager() {
-    	LOG.info("Activating cache...");
     	return new ConcurrentMapCacheManager("valoraciones");
     }
 }
