@@ -6,9 +6,8 @@ services:
       - MYSQL_ROOT_PASSWORD=root3434
       - MYSQL_DATABASE=db_talleresmcqueen
   
-  web1:
-    container_name: web1
-    build: TalleresMcQueenWEB/.
+  web:
+    build: TalleresMCQueen/.
     ports:
       - "8443:8443"
     expose: 
@@ -19,25 +18,16 @@ services:
       - SPRING_RABBITMQ_HOST=broker
       - SPRING_DATASOURCE_URL=jdbc:mysql://db/db_talleresmcqueen
       - APP_SERVICIO_REST=loadbalancer   
- 
-  web2:
-    container_name: web2
-    build: TalleresMcQueenWEB/.
-    expose:
-      - "8443"
-    restart:
-      unless-stopped
-    environment:
-      - SPRING_RABBITMQ_HOST=broker
-      - SPRING_DATASOURCE_URL=jdbc:mysql://db/db_talleresmcqueen
-      - APP_SERVICIO_REST=loadbalancer
-
+    deploy:
+      mode: replicated
+      replicas: 2
+  
   
   broker:
     image: rabbitmq
 
   rabbitmq:
-    build: InternalService/.
+    build: ServicioInterno/.
     environment:
       - SPRING_RABBITMQ_HOST=broker    
       
