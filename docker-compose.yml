@@ -27,12 +27,12 @@ services:
     image: rabbitmq
 
   rabbitmq:
-    build: ServicioInterno/.
+    build: InternalService/.
     environment:
       - SPRING_RABBITMQ_HOST=broker    
       - SPRING_MAIL_USERNAME=
       - SPRING_MAIL_PASSWORD=
-      
+
   loadbalancer:
     image: haproxy:2.7.3
     ports:
