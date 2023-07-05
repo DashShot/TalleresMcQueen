@@ -19,7 +19,7 @@ public interface ValoracionesRepository extends  JpaRepository<Valoraciones, Lon
     @CacheEvict(allEntries = true)
     Valoraciones save(Valoraciones valoracion);
 
-
+    @CacheEvict(allEntries = true)
     void delete(Valoraciones valoracion);
 
     @Cacheable
@@ -28,5 +28,6 @@ public interface ValoracionesRepository extends  JpaRepository<Valoraciones, Lon
     @Cacheable
     List<Valoraciones> findByTexto(String texto);
 
-    
+    @Cacheable //findall
+    List<Valoraciones> findAll();
 } 

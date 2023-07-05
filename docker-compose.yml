@@ -6,7 +6,7 @@ services:
       - MYSQL_ROOT_PASSWORD=root3434
       - MYSQL_DATABASE=db_talleresmcqueen
   
-  web:
+  web1:
     build: TalleresMCQueen/.
     expose:
       - "8443"
@@ -15,9 +15,16 @@ services:
       - SPRING_RABBITMQ_HOST=broker
       - SPRING_DATASOURCE_URL=jdbc:mysql://db/db_talleresmcqueen
       - APP_SERVICIO_REST=loadbalancer   
-    deploy:
-      mode: replicated
-      replicas: 2
+
+  web2:
+    build: TalleresMCQueen/.
+    expose:
+      - "8443"
+    restart: unless-stopped
+    environment:
+      - SPRING_RABBITMQ_HOST=broker
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db/db_talleresmcqueen
+      - APP_SERVICIO_REST=loadbalancer   
 
   broker:
     image: rabbitmq
