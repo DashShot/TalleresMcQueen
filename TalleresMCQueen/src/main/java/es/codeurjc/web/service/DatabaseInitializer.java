@@ -38,6 +38,8 @@ public class DatabaseInitializer {
     @PostConstruct
     public void init() throws IOException, URISyntaxException{
 
+        if (this.usuarioService.findbyID(1L).isPresent()){
+            
         Usuario user1 = new Usuario("Pedro", passwordEncoder.encode("pass1"),"correo1", "USER");
         Usuario user2 =new Usuario("Maria", passwordEncoder.encode("pass2"), "correo2","USER");
         Usuario user3 =new Usuario("Juan", passwordEncoder.encode("pass3"), "correo3","USER");
@@ -101,5 +103,6 @@ public class DatabaseInitializer {
         contactosService.save(new Contactos("Calle 7 - Ciudad 1", "contacto7@example.com", 723456789));
         contactosService.save(new Contactos("Calle 8 - Ciudad 1", "contacto8@example.com", 823456789));
 
+        }
     }
 }
