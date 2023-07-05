@@ -1,14 +1,11 @@
-# Imagen base
-FROM openjdk:11
+FROM maven:3.9 as builder
+COPY .  /code/
+WORKDIR /code
+RUN mvn package
 
-# Se crea el directorio de trabajo
-RUN mkdir /usr/src/TMQIntServ
+FROM openjdk:17-jre
+COPY --from=builder /code/target/*.jar /usr/app/app.jar
+WORKDIR /usr/app
+CMD [ "java", "-jar", "app.jar" ]
 
-# Se establece el directorio de trabajo
-WORKDIR /usr/src/TMQIntServ
-
-# Se copia el .jar al directorio
-COPY ./InternalService-0.0.1-SNAPSHOT.jar /usr/src/TMQIntServ
-
-# Se inicia la aplicacion y se especifica el correo usado
-CMD [ "java", "-jar", "./InternalService-0.0.1-SNAPSHOT.jar", "--spring.mail.username= ","spring.mail.password="]
+# "--spring.mail.username= ","spring.mail.password="]

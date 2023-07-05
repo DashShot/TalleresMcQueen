@@ -1,5 +1,5 @@
 FROM maven:3.9 as builder
-COPY TalleresMCQueen/ /code/
+COPY .  /code/
 WORKDIR /code
 RUN mvn package
 
