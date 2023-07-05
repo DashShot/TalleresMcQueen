@@ -8,12 +8,9 @@ services:
   
   web:
     build: TalleresMCQueen/.
-    ports:
-      - "8443:8443"
-    expose: 
+    expose:
       - "8443"
-    restart: 
-      unless-stopped
+    restart: unless-stopped
     environment:
       - SPRING_RABBITMQ_HOST=broker
       - SPRING_DATASOURCE_URL=jdbc:mysql://db/db_talleresmcqueen
@@ -21,8 +18,7 @@ services:
     deploy:
       mode: replicated
       replicas: 2
-  
-  
+
   broker:
     image: rabbitmq
 
