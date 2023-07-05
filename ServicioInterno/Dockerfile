@@ -3,7 +3,7 @@ COPY .  /code/
 WORKDIR /code
 RUN mvn package
 
-FROM openjdk:17-jre
+FROM eclipse-temurin:17.0.6_10-jre
 COPY --from=builder /code/target/*.jar /usr/app/app.jar
 WORKDIR /usr/app
 CMD [ "java", "-jar", "app.jar" ]
